@@ -43,61 +43,40 @@
   </head>
 
   <body>
-    <div id="nav-toggle">
-    <a href="{{urls.base_path}}" style="position:absolute; top:0;">
-      <i class="icon-home icon-white"></i> home
-    </a>
-    <a href="#"><i class="icon-align-justify icon-white"></i> Menu</a>
-  </div>
-
-  <div id="left-pane">
-    <ul id="toc">
-      <li>
-        <a class="brand" href="{{ urls.base_path }}" style="padding-left:10px">
-          <i class="icon-home icon-white"></i> HOME
-        </a>
-      </li>
-
-      {{# usage.all }}
-      <li class="{{#is_active_page}}active{{/is_active_page}}">
-        <a href="{{ url }}" class="heading">{{ title }}</a>
-      </li>
-      {{/ usage.all }}
-
-      {{# data.docs_nav?to__root }}
-      <li class="{{#is_active_page}}active{{/is_active_page}}">
-        <a href="{{ url }}" class="heading">{{ title }}</a>
-      </li>
-      {{/ data.docs_nav?to__root }}
-    </ul>
-  </div>
-
-  <div id="outline-pane">
-    {{{ widgets.swiftype }}}
-  </div>
-  <div id="novel">
-    <div class="inner">
-      <div id="main-content" class="novel docs layout-{{page.layout}}">
-        <div class="inner">
-          {{{ page.content }}}
+    <div id="wrap">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+          <ul class="nav navbar-nav">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="container">
+        {{ content }}
       </div>
+
     </div>
-
-    <footer class="footer" style="margin:20px 0">
-      <p>{{> footer_credits }}</p>
-    </footer>
-  </div>
-
-  {{# javascripts.load }}
-    https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
-    table-of-contents.js
-  {{/ javascripts.load }}
-
-
-  <!-- syntax should be below-->
-  {{{ widgets.syntax }}}
-  {{{ widgets.analytics }}}
 
     <div id="footer">
       <div class="container">
@@ -115,35 +94,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
-      <script>
-    $(function() {
-      TocNew.init('#toc','#novel');
-
-      // Personalize install code. 
-      // Make sure to update this whenever landing page changes to ensure proper id values.
-      var Pc = {
-        init : function() {
-          var $codeContainer = $("#step-2-code");
-          var code = $codeContainer.text();
-          var $repoName = $("#repo_name");
-          var $blogLink = $("#blog_link");
-          $("form").first().submit(function(e){
-            var username = $("#github_username").val();
-            $codeContainer.text(code.replace(/USERNAME/g, username));
-            $repoName.text( username + ".github.com");
-            $blogLink.text("http://" + username + ".github.com").attr("href", "http://" + username + ".github.com");
-            if ($.trim(username) !== ""){ 
-              if (typeof mpq !== 'undefined') mpq.track("install", {"username": username });
-              if (typeof _gaq !== 'undefined') _gaq.push(['_trackEvent', 'Forms', 'Input', username]);
-            }  
-            e.preventDefault();
-            return false;
-          })
-        }
-      }
-
-      Pc.init();
-    })
-  </script>
   </body>
 </html>
