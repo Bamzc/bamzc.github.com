@@ -44,37 +44,10 @@
 
   <body>
     <div id="wrap">
-      <nav class="navbar navbar-default" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+        <nav class="navbar navbar-default g-navbar-box" role="navigation" id="Js_page-navbar"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="http://www.soulteary.com" title="苏洋博客" target="_self">苏洋博客</a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right" id="JS_nav_list"><li class="menu-item"><a class="menu-item-link" href="/" target="_self" title="查看网站首页页面的内容">网站首页</a></li><li class="menu-item"><a class="menu-item-link" href="/topics/life" target="_self" title="查看生活点滴分类下的文章">生活点滴</a><ul class="dropdown-menu bounceOutDown animated"><li><a href="/topics/life/trivia" target="_self" title="查看生活琐事分类下的文章">生活琐事</a></li><li><a href="/topics/life/diary" target="_self" title="查看生活随笔分类下的文章">生活随笔</a></li><li><a href="/topics/life/uncategorized" target="_self" title="查看杂乱文档分类下的文章">杂乱文档</a></li><li><a href="/archives" target="_self" title="查看文章存档页面的内容">文章存档</a></li></ul></li><li class="menu-item"><a class="menu-item-link" href="/about" target="_self" title="查看关于苏洋页面的内容">关于苏洋</a><ul class="dropdown-menu bounceIn"><li><a href="/booklist" target="_self" title="查看阅读列表页面的内容">阅读列表</a></li><li><a href="/topics/about/my-design" target="_self" title="查看设计草图分类下的文章">设计草图</a></li><li><a href="/topics/about/my-summary" target="_self" title="查看学习总结分类下的文章">学习总结</a></li><li><a href="/my-works" target="_self" title="查看我的作品页面的内容">我的作品</a></li></ul></li><li class="menu-item"><a class="menu-item-link" href="/topics/knowledge" target="_self" title="查看学习点滴分类下的文章">学习点滴</a><ul class="dropdown-menu bounceOutDown animated"><li><a href="/topics/knowledge/frontend-knowledge" target="_self" title="查看前端积累分类下的文章">前端积累</a></li><li><a href="/topics/knowledge/backend-knowledge" target="_self" title="查看后端脚本分类下的文章">后端脚本</a></li><li><a href="/topics/knowledge/desktop-knowledge" target="_self" title="查看桌面开发分类下的文章">桌面开发</a></li><li><a href="/topics/knowledge/system-knowledge" target="_self" title="查看系统相关分类下的文章">系统相关</a></li><li><a href="/topics/knowledge/reference-room" target="_self" title="查看资料收集分类下的文章">资料收集</a></li></ul></li><li class="menu-item"><a class="menu-item-link" href="/topics/share" target="_self" title="查看资源分享分类下的文章">资源分享</a><ul class="dropdown-menu bounceOutDown animated"><li><a href="/topics/share/media" target="_self" title="查看媒体资源分类下的文章">媒体资源</a></li><li><a href="/topics/share/tips" target="_self" title="查看实用技巧分类下的文章">实用技巧</a></li><li><a href="/topics/share/software" target="_self" title="查看经典软件分类下的文章">经典软件</a></li><li><a href="/topics/share/leisure-moment" target="_self" title="查看休闲一刻分类下的文章">休闲一刻</a></li><li><a href="/topics/share/past-records" target="_self" title="查看历史尘埃分类下的文章">历史尘埃</a></li></ul></li><li class="menu-item"><a class="menu-item-link" href="/links" target="_self" title="查看友情链接页面的内容">友情链接</a></li><li class="menu-item"><a class="menu-item-link" href="/contact" target="_self" title="查看给我留言页面的内容">给我留言</a></li></ul></div></nav>
+        <div class="container">
+            {{ content }}
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
-          <ul class="nav navbar-nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div><!-- /.navbar-collapse -->
-      </nav>
-
-      <div class="container">
-        {{ content }}
-      </div>
 
     </div>
 
