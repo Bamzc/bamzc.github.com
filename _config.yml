@@ -17,6 +17,21 @@ author :
   twitter : bamzc
   feedburner : feedname
 
+
+date_format: "%B %d, %Y"
+_root:
+  permalink: "/:relative_path/:filename.html"
+  layout: docs-layout
+  paginator:
+    enable: false
+
+usage:
+  layout: docs-layout
+  permalink: "/:path/:filename.html"
+  sort: ["sort", "asc"]
+  paginator: 
+    enable : false
+
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
