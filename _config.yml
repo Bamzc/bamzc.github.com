@@ -8,11 +8,11 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : bamzc
+title : My Blog
 tagline: 我的博客
 author :
   name : Zhaoce Bai
-  email : blah@email.test
+  email : bamzc@hotmail.com
   github : bamzc
   twitter : bamzc
   feedburner : feedname
