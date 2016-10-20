@@ -1,11 +1,12 @@
 ---
 layout: page
-title: 前端面试题总结
+title : 哔哩哔哩
+<!--title: 前端面试题总结-->
 header: Posts By Tag
 group: navigation
 ---
 {% include JB/setup %}
-HTML/CSS部分
+<!--HTML/CSS部分
 1.css垂直水平居中
 定宽定高解决办法;父级 position:relavive;子级:position:absolute; top:50%; left:50%; width:100px;height:200px; margin:-100px 0 0 -50px；
 宽高不定:父级 position:relavive;子级: position: absolute; transform:translate(-50%,-50%); top:50%; left:50%;
@@ -26,3 +27,4 @@ JavaScript部分
   		return Array.apply(null,Array(n-len > 0 ? (n-len+1) : 0)).join("0")+str;
 }       
 getStr(123,5);
+-->
