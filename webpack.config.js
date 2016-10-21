@@ -28,13 +28,13 @@ var entry = glob.sync("./assets/themes/js/**/*.js"),
 function arrToObj(arr){
     var obj = {};
     arr.forEach(function(v,i){
-        let k = path.basename(v,'.js');
+        var k = path.basename(v,'.js');
         obj[k] = v;
     });
 
     return obj;
 }
-let entryObj = arrToObj(entry);
+var entryObj = arrToObj(entry);
 //生产环境js压缩和图片cdn
 if (isProduction()) {
     //plugins.push(new webpack.optimize.UglifyJsPlugin());
