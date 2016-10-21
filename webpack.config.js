@@ -21,9 +21,9 @@ var plugins = [
     })
 ];
 
-var entry = glob.sync("./assets/js/**/*.js"),
+var entry = glob.sync("./assets/themes/js/**/*.js"),
     cdnPrefix = '',
-    buildPath = '/assets/dist/',
+    buildPath = '/assets/themes/dist/',
     publishPath = cdnPrefix + buildPath;
 function arrToObj(arr){
     var obj = {};

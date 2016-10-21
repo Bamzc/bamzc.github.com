@@ -76,7 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 /******/
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".build.js?" + {"0":"4ec7c2241bd64664677b","1":"d1802dffdbd3050ace0e","2":"1798d0b282062810e300"}[chunkId] + "";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".build.js?" + {"0":"4ec7c2241bd64664677b","1":"8232c30388bbf81e4a95","2":"1798d0b282062810e300"}[chunkId] + "";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -88,7 +88,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/assets/dist/";
+/******/ 	__webpack_require__.p = "/assets/themes/dist/";
 /******/ })
 /************************************************************************/
 /******/ ([]);
