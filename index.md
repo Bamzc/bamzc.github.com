@@ -4,4 +4,5 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
-{% include _site/index.html %}
+{% include JB/setup %}
+{% include _layouts/default.html %}
