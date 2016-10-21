@@ -27,9 +27,9 @@ Usage:
     {% if node.title != null %}
       {% if group == null or group == node.group %}
       	{% if page.url == node.url %}
-      	<li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+      	<li class="active menu-item"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a><ul class="dropdown-menu bounceOutDown animated"><li><a title="查看生活琐事分类下的文章" target="_self" href="/topics/life/trivia">生活琐事</a></li><li><a title="查看生活随笔分类下的文章" target="_self" href="/topics/life/diary">生活随笔</a></li><li><a title="查看杂乱文档分类下的文章" target="_self" href="/topics/life/uncategorized">杂乱文档</a></li><li><a title="查看文章存档页面的内容" target="_self" href="/archives">文章存档</a></li></ul></li>
       	{% else %}
-      	<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+      	<li class="menu-item"><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
       	{% endif %}
       {% endif %}
     {% endif %}

@@ -451,7 +451,7 @@ a:hover {
   height: 14px;
   margin: 0 4px;
   text-indent: -999em;
-  border: 4px solid #4f8db3;
+  border: 3px solid #fff;
   cursor: pointer;
   -webkit-border-radius: 30px;
   -webkit-background-clip: padding-box;
@@ -469,7 +469,7 @@ a:hover {
   transition: background .5s, opacity .5s;
 }
 .sequence-pagination li.current {
-  background: #4f8db3;
+  background: #fff;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -815,36 +815,6 @@ a:hover {
     .picAanimation-wrapper{
       float: left;
     }
-    .btn {
-      padding: 6px 12px;
-      border: 1px solid #4f8db3;
-      -webkit-border-radius: 2px;
-      -webkit-background-clip: padding-box;
-      -moz-border-radius: 2px;
-      -moz-background-clip: padding;
-      border-radius: 2px;
-      background-clip: padding-box;
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
-      text-transform: none;
-      -webkit-transition: all .25s ease;
-      -moz-transition: all .25s ease;
-      -o-transition: all .25s ease;
-      -ms-transition: all .25s ease;
-      transition: all .25s ease;
-      background: none repeat scroll 0 0 #4f8db3;
-      text-shadow: none;
-      box-shadow: none;
-      color: #FFF;
-      white-space: nowrap;
-    }
-    .btn:hover {
-      background: none repeat scroll 0 0 #3b3c41;
-      color: #FFF;
-      text-decoration: none;
-      border: 1px solid #3b3c41;
-    }
     .pic-info-animation{
       width: 372px;
       position: relative;
@@ -953,15 +923,18 @@ a:hover {
   Footer Style
 --------------------------------------------------------------------------*/
 .footer {
-  background: #222;
-  color: #A0A0A0;
-  padding: 0 20px 10px 20px;
-  border-top: 4px solid #4f8db3;
-  margin-top: 20px;
-  -webkit-box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
-  box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
-  color: 0 -1px 12px rgba(0,0,0,0.4);
+  background: #dd4814;
+  color: #fff;
+  border: 1px solid #bf3e11;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin-top:5px;
+}
+.footer p{
+  line-height: 40px;
+  text-align: center;
+  margin: 0px;
 }
 .footer h3 {
   color: #E4E4E4;
@@ -1079,6 +1052,48 @@ h1, h2, h3, h4 {
   border: 1px solid #4c964d;
   color: #FFF; 
 }
+/**菜单层*/
 .navbar{
     margin: 0px;
+}
+.navbar-nav .navbar-brand {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: LogoEffect;
+    backface-visibility: visible !important;
+}
+.navbar-nav .menu-item .dropdown-menu {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: navMenuBounceOutDown;
+}
+.navbar-nav .menu-item .dropdown-menu::before {
+    border-color: transparent transparent #ccc;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 29px;
+    top: -10px;
+    width: 0;
+}
+.navbar-nav  .menu-item .dropdown-menu::after {
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 31px;
+    top: -8px;
+    width: 0;
+}
+.navbar-nav .menu-item:hover .dropdown-menu {
+    display: block;
+}
+@media (max-width: 767px) {
+.navbar-nav .menu-item:hover .dropdown-menu {
+    display: none;
+}
 }

@@ -43,7 +43,7 @@ webpackJsonp([1,3],[
 	        pagination: !0,
 	        animateStartingFrameIn: !0,
 	        autoPlay: !0,
-	        autoPlayDelay: 2e3,
+	        autoPlayDelay: 6e3,
 	        preloader: !0
 	    };
 	    $("#sequence").sequence(c).data("sequence");
@@ -51,8 +51,8 @@ webpackJsonp([1,3],[
 	    var d = $("#scroll_box li").length,
 	        e = $("#scroll_box li").outerWidth(!0),
 	        f = $(".box").outerWidth(!0),
-	        g = (Math.ceil(f / e), 1e3),
-	        h = 3e3,
+	        g = (Math.ceil(f / e), 3e3),
+	        h = 3e4,
 	        i = 1;
 	    $("#scroll_box").css("width", d * e), setInterval(b, h);
 	})();

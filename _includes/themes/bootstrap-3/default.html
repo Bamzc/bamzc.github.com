@@ -12,11 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap styles -->
-    <link href="{{ ASSET_PATH }}/themes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Optional theme -->
-    <link href="{{ ASSET_PATH }}/themes/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- Sticky Footer -->
-    <link href="{{ ASSET_PATH }}/themes/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/themes/bootstrap/css/bootstrap.css" rel="stylesheet">
     
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/themes/css/main.css?body=1" rel="stylesheet" type="text/css" media="all">
@@ -60,9 +56,9 @@
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
+                  <input type="text" class="form-control" placeholder="站内搜索">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">搜索</button>
             </form>
         </div><!-- /.navbar-collapse -->
       </nav>
@@ -74,7 +70,7 @@
     </div>
     
 
-    <div id="footer">
+    <div class="footer">
       <div class="container">
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
         </p>
