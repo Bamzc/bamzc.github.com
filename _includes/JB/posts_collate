@@ -20,36 +20,35 @@ Usage:
 {% if site.JB.posts_collate.provider == "custom" %}
   {% include custom/posts_collate %}
 {% else %}
-  {% for post in posts_collate  %}
-    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
-    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-    {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
-  
-    {% if forloop.first %}
-      <h2>{{this_year}}</h2>
-      <h3>{{this_month}}</h3>
-      <ul>
-    {% endif %}
-  
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  
-    {% if forloop.last %}
-      </ul>
-    {% else %}
-      {% if this_year != next_year %}
-        </ul>
-        <h2>{{next_year}}</h2>
-        <h3>{{next_month}}</h3>
-        <ul>
-      {% else %}    
-        {% if this_month != next_month %}
-          </ul>
-          <h3>{{next_month}}</h3>
-          <ul>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+{% for category in site.categories %}
+  {% for post in category.last  %}
+    <div class="row">
+      <div class="col-md-12 post-container">
+      <h2 class="post-title">
+      <a rel="bookmark" href="">{{post.title}}</a>
+      </h2>
+    <div class="meta-box">
+    <span class="m-post-date">
+    <i class="fa fa-calendar-o"></i>{{ post.date | date_to_string }}</span>
+    <span class="comments-link">
+      <a title="Comment on {{post.title}}" data-thread-key="9544" class="ds-thread-count" href="#" target="_self">
+      <i class="fa fa-comments-o"></i> 5 条评论</a>
+      </span>
+    </div>
+    <div class="post-content post-expect">
+      <p>战斗吧，少年！
+    <a class="more-link btn btn-primary btn-xs" href="#">阅读全文</a>
+    </p>
+    </div>
+    <div class="meta-box">
+    <span class="cat-links"><i class="fa fa-navicon"></i><b>分类:</b>
+      <a rel="category tag" href="#" target="_self">Windows/Mac</a>, 
+      <a rel="category tag" href="#">科技</a></span>
+    <span class="tag-links"><i class="fa fa-tags"></i><b>标签:</b><a rel="tag" href="http://www.soulteary.com/tags/%e7%bd%91%e7%bb%9c%e4%bc%98%e5%8c%96" target="_self">德玛西亚</a>, <a rel="tag" href="#" target="_self">诺克萨斯</a></span>
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+{% endfor %}
 {% endif %}
 {% assign posts_collate = nil %}

@@ -21,37 +21,9 @@ body {
   line-height: 20px;
   color: #535b60;
 }
-h1 {
-  color: #53555c;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
+html,body{
+ height:100%; 
 }
-h2 {
-  color: #53555c;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
-  border-bottom: 2px solid #53555c;
-  line-height: 1.5em;
-  margin: 30px 0;
-  padding-left: 10px;
-}
-h3 {
-  font-family: 'Open Sans', sans-serif;
-  color: #53555c;
-  font-size: 1.5em;
-}
-h4 {
-  font-family: 'Open Sans', sans-serif;
-  color: #53555c;
-  margin-bottom: 10px;
-}
-a {
-  color: #4f8db3;
-}
-a:hover {
-  color: #2f556d;
-}
-
 .header{
   	background-color: #FFF;
   	border-bottom: 4px solid #4f8db3;
@@ -72,7 +44,11 @@ a:hover {
 	float: left;
 	padding: 0 8px;
 }
-
+#wrap{
+  position: relative;
+  height: auto;
+  min-height: 100%;
+}
 /*--------------------------------------------------------------------------
 +	导航栏菜单样式
 --------------------------------------------------------------------------*/
@@ -302,14 +278,14 @@ a:hover {
   font-size: 0.625em;
   margin: 0 auto 30px auto;
   position: relative;
-  height: 400px;
+  height: 420px;
 }
 #sequence img {
   max-width: 100%;
 }
 #sequence > .sequence-canvas {
   list-style-type: none;
-  height: 400px;
+  height: 420px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -330,7 +306,7 @@ a:hover {
 #sequence > .sequence-canvas > li {
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 420px;
   z-index: 1;
   -webkit-transition-property: background;
   -moz-transition-property: background;
@@ -923,18 +899,17 @@ a:hover {
   Footer Style
 --------------------------------------------------------------------------*/
 .footer {
-  background: #dd4814;
-  color: #fff;
-  border: 1px solid #bf3e11;
+  background: #fff;
+  color: #dd4814;
   position: absolute;
   width: 100%;
-  height: 44px;
+  height: 20px;
   bottom: 0px;
   margin-top:5px;
   z-index: 100;
 }
 .footer p{
-  line-height: 40px;
+  line-height: 20px;
   text-align: center;
   margin: 0px;
 }
@@ -1145,4 +1120,96 @@ h1, h2, h3, h4 {
 .navbar-nav .menu-item:hover .dropdown-menu {
     display: none;
 }
+}
+.main-content{
+    min-height: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    position: relative;
+}
+.row .post-container{
+  padding-left: 4%;
+}
+.main-content a{
+  color:#dd4814;
+}
+.main-content a:focus, a:hover {
+  color: #97310e;
+  text-decoration: underline;
+}
+.main-content .row .post-container .post-title{
+  margin-bottom: 16px;
+  font-weight:100;
+  color: #dd4814;
+}
+.post-container{
+  border-bottom: 1px dashed #cacaca;
+  padding-bottom:30px;
+}
+.post-container p{
+  text-indent: 2em;
+  margin: 5px 0;
+}
+.main-content .btn{
+  text-indent: 0;
+}
+.main-content .btn:focus,.btn:hover{
+  color: #fff;
+}
+
+.main-content .row .meta-box{
+  
+}
+.main-content .row .meta-box .m-post-date{
+  
+}
+
+.main-content .row .meta-box .comments-link{
+  
+}
+.main-content .row .meta-box span{
+  padding: 0 10px 0 2px;
+}
+.post-container .post-expect{
+  padding : 10px;
+}
+.post-container .post-expect a{
+  vertical-align: text-bottom;
+}
+.post-container .post-expect p{
+    line-height: 2;
+    text-indent: 2em;
+}
+.post-container .btn-primary{
+    background-color: #dd4814;
+    border-color: #dd4814;
+    color: #fff;
+    text-indent:0;
+}
+.post-container .meta-box .cat-links {
+    color: #dd4814;
+    margin-right: 15px;
+}
+.post-container .meta-box .tag-links {
+    color: #dd4814;
+    margin-right: 15px;
+}
+.post-container .meta-box .tag-links b {
+    margin-right: 5px;
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: inherit;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-rendering: auto;
 }

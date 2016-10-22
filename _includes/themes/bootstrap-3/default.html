@@ -66,17 +66,17 @@
     <div class="container">
         {{ content }}
     </div>
+        <div class="footer">
+            <div class="footer-container">
+                <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+                </p>
+            </div>
+        </div>
 
     </div>
     
 
-    <div class="footer">
-      <div class="container">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-        </p>
-      </div>
-    </div>
-
+    
     <!--{% include JB/analytics %}-->
 
 
