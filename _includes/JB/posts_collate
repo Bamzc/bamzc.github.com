@@ -22,32 +22,40 @@ Usage:
 {% else %}
 {% for category in site.categories %}
   {% for post in category.last  %}
-    <div class="row">
-      <div class="col-md-12 post-container">
-      <h2 class="post-title">
-      <a rel="bookmark" href="">{{post.title}}</a>
-      </h2>
-    <div class="meta-box">
-    <span class="m-post-date">
-    <i class="fa fa-calendar-o"></i>{{ post.date | date_to_string }}</span>
-    <span class="comments-link">
-      <a title="Comment on {{post.title}}" data-thread-key="9544" class="ds-thread-count" href="#" target="_self">
-      <i class="fa fa-comments-o"></i> 5 条评论</a>
-      </span>
-    </div>
-    <div class="post-content post-expect">
-      <p>战斗吧，少年！
-    <a class="more-link btn btn-primary btn-xs" href="#">阅读全文</a>
-    </p>
-    </div>
-    <div class="meta-box">
-    <span class="cat-links"><i class="fa fa-navicon"></i><b>分类:</b>
-      <a rel="category tag" href="#" target="_self">Windows/Mac</a>, 
-      <a rel="category tag" href="#">科技</a></span>
-    <span class="tag-links"><i class="fa fa-tags"></i><b>标签:</b><a rel="tag" href="#" target="_self">德玛西亚</a>, <a rel="tag" href="#" target="_self">诺克萨斯</a></span>
-    </div>
-    </div>
-    </div>
+    {% if post.category == page.category %}
+        <div class="row">
+          <div class="col-md-12 post-container">
+          <h2 class="post-title">
+          <a rel="bookmark" href="">{{post.title}}</a>
+          </h2>
+        <div class="meta-box">
+        <span class="m-post-date">
+        <i class="fa fa-calendar-o"></i>{{ post.date | date: "%Y年%m月%d日" }}</span>
+        <span class="comments-link">
+          <a title="Comment on {{post.title}}" data-thread-key="9544" class="ds-thread-count" href="#" target="_self">
+          <i class="fa fa-comments-o"></i> 5 条评论</a>
+          </span>
+        </div>
+        <div class="post-content post-expect">
+          <p>{{post.brief}}
+        <a class="more-link btn btn-primary btn-xs" href="{{post.permalink}}">阅读全文</a>
+        </p>
+        </div>
+        <div class="meta-box">
+        <span class="cat-links"><i class="fa fa-navicon"></i><b>分类:</b>
+        {% for _category in post.categorys %}
+          <a rel="category tag" href="#" >{{_category}}</a>
+        {% endfor %} 
+        </span>
+        <span class="tag-links"><i class="fa fa-tags"></i><b>标签:</b>
+        {% for _tag in post.tags %}
+            <a rel="tag" href="#" target="_self">{{_tag}}</a>
+        {% endfor %}
+        </span>
+        </div>
+        </div>
+        </div>
+    {% endif %}
     {% endfor %}
 {% endfor %}
 {% endif %}

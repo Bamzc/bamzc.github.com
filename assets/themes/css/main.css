@@ -965,8 +965,11 @@ html,body{
   font-size: 0.9em;
 }
 
-h1, h2, h3, h4 {
-  color: #f22430;
+h1, h2 {
+  color: #dd4814;
+}
+h3, h4{
+    color: #000;
 }
 
 
@@ -1146,6 +1149,9 @@ h1, h2, h3, h4 {
   border-bottom: 1px dashed #cacaca;
   padding-bottom:30px;
 }
+.post-container-category{
+    border-bottom: 0px;
+}
 .post-container p{
   text-indent: 2em;
   margin: 5px 0;
@@ -1190,11 +1196,14 @@ h1, h2, h3, h4 {
     color: #dd4814;
     margin-right: 15px;
 }
+.post-container .meta-box .cat-links a,b {
+    margin-right: 5px;
+}
 .post-container .meta-box .tag-links {
     color: #dd4814;
     margin-right: 15px;
 }
-.post-container .meta-box .tag-links b {
+.post-container .meta-box .tag-links a,b {
     margin-right: 5px;
 }
 .fa {

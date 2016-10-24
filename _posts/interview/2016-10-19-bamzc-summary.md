@@ -1,9 +1,8 @@
 ---
-layout: page
-title : 哔哩哔哩
+layout: category_page
+title : 哈哈哈哈
 <!--title: 前端面试题总结-->
 header: Posts By Tag
-category: life
 group: navigation
 ---
 {% include JB/setup %}
