@@ -6,13 +6,15 @@ var glob = require("glob");
 //分离CSS和JS文件
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-function isProduction() {
-    return process.env.NODE_ENV === 'production';
-}
 //webpack插件
 var plugins = [
     //提公用js到common.js文件中
-    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.optimize.CommonsChunkPlugin('js/common.js'),
+    //将样式统一发布到style.css中
+    new ExtractTextPlugin("css/[name].css", {
+        allChunks: true,
+        disable: false
+    }),
     //使用 ProvidePlugin 加载使用率高的依赖库
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -35,46 +37,28 @@ function arrToObj(arr){
     return obj;
 }
 var entryObj = arrToObj(entry);
-//生产环境js压缩和图片cdn
-if (isProduction()) {
-    //plugins.push(new webpack.optimize.UglifyJsPlugin());
-    cdnPrefix = "";
-    publishPath = cdnPrefix;
-}
 
 module.exports = {
     debug : true,
     entry : entryObj,
     output : {
         path : __dirname + publishPath,
-        filename : '[name].build.js',//打包后的文件名
+        filename : 'js/[name].js',//打包后的文件名
         publicPath : publishPath, //网站运行时的访问路径。
-        chunkFilename:"[id].build.js?[chunkhash]"
+        chunkFilename:"[id].js?[chunkhash]"
     },
     module : {
         loaders : [{
             test : /\.css/,
-            loader :  ExtractTextPlugin.extract(
-                "style-loader", "css-loader?sourceMap!cssnext-loader")
-        },{
-            test : /\.js/,
-            exclude: /node_modules|vue\/dist/,
-            loader: 'babel'
+            loader : ExtractTextPlugin.extract(
+                "style-loader", "css-loader")
         },{
             test : /\.(jpg|png|gif)$/,
             loader : "file-loader?name=images/[hash].[ext]"
         },{
-            test : /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader : "url-loader?limit=10000&minetype=application/font-woff"
-        },{
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: "file-loader"
-        },{
-            test: /\.json$/,
-            loader: 'json'
-        },{
-            test: /\.(html|tpl)$/,
-            loader: 'html-loader'
+            test : /\.js/,
+            exclude: /node_modules|vue\/dist/,
+            loader: 'babel'
         }]
     },
     babel: {
@@ -86,7 +70,6 @@ module.exports = {
         extension: ['', '.js'],
         //别名
         alias: {
-            filter: path.join(__dirname, 'src/filters'),
             jquery: path.join(__dirname, 'assets/base/jquery-2.1.4')
         }
     },

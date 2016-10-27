@@ -1,3 +1,1 @@
-$(function() {
-
-});
+import codeMirror from '../../base/codemirror';

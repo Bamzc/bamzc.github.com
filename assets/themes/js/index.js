@@ -1,4 +1,5 @@
 'use strict'
+require('../css/main.css');
 import '../../base/jquery.sequence-min';
 var a = function() {
     function a() { e.on("click", b), d.on("click", function(a) { a.stopPropagation() }) }

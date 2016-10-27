@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     webpack = require('webpack'),
+    minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify');
 
 var config = require('./webpack.config');
@@ -16,16 +17,28 @@ gulp.task('webpack', function(cb) {
  *  压缩js
  */
 gulp.task('script',function(){
-    gulp.src('./assets/themes/dist/*.js')
+    gulp.src('./assets/themes/dist/js/*.js')
     // .pipe(rename({suffix:'.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
 });
-
+/** 
+ *  压缩css文件
+ */
+gulp.task('style',function() {
+    gulp.src('./assets/themes/dist/css/*.css')
+    //.pipe(rename({suffix:'.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('assets/css'));
+});
+/**
+ *  监听器
+ */
 gulp.task("watch",function(cb){
     gulp.watch('assets/themes/js/**/*.js', ['webpack','script']);
+    gulp.watch('assets/themes/dist/css/*.css', ['style']);
 })
 
-gulp.task('default', ['webpack','script','watch'] ,function() {
+gulp.task('default', ['webpack','script','watch','style'] ,function() {
     gulp.start()
 })
