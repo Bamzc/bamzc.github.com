@@ -26,7 +26,7 @@ Usage:
         <div class="row">
           <div class="col-md-12 post-container">
           <h2 class="post-title">
-          <a rel="bookmark" href="">{{post.title}}</a>
+          <a rel="bookmark" href="{{post.permalink}}">{{post.title}}</a>
           </h2>
         <div class="meta-box">
         <span class="m-post-date">
