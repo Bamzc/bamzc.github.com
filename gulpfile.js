@@ -35,10 +35,11 @@ gulp.task('style',function() {
  *  监听器
  */
 gulp.task("watch",function(cb){
-    gulp.watch('assets/themes/js/**/*.js', ['webpack','script']);
+    gulp.watch('assets/themes/js/**/*.js', ['webpack']);
+    gulp.watch('assets/themes/dist/js/*.js', ['script']);
     gulp.watch('assets/themes/dist/css/*.css', ['style']);
 })
 
-gulp.task('default', ['webpack','script','watch','style'] ,function() {
-    gulp.start()
+gulp.task('default', ['webpack'] ,function() {
+    gulp.start('script','watch','style')
 })

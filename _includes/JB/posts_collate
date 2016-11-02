@@ -26,19 +26,19 @@ Usage:
         <div class="row">
           <div class="col-md-12 post-container">
           <h2 class="post-title">
-          <a rel="bookmark" href="{{post.permalink}}">{{post.title}}</a>
+          <a rel="bookmark" href="{{post.id}}#{{post.date | date: "%H%M"}}">{{post.title}}</a>
           </h2>
         <div class="meta-box">
         <span class="m-post-date">
         <i class="fa fa-calendar-o"></i>{{ post.date | date: "%Y年%m月%d日" }}</span>
         <span class="comments-link">
-          <a title="Comment on {{post.title}}" data-thread-key="9544" class="ds-thread-count" href="#" target="_self">
+          <a title="Comment on {{post.title}}" class="ds-thread-count" href="#" target="_self">
           <i class="fa fa-comments-o"></i> 5 条评论</a>
           </span>
         </div>
         <div class="post-content post-expect">
           <p>{{post.brief}}
-        <a class="more-link btn btn-primary btn-xs" href="{{post.permalink}}">阅读全文</a>
+        <a class="more-link btn btn-primary btn-xs" href="{{post.id}}#{{post.date | date: "%H%M"}}">阅读全文{{post.date | date: "%H-%M-%S"}}</a>
         </p>
         </div>
         <div class="meta-box">

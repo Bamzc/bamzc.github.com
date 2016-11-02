@@ -1206,4 +1206,9 @@ h3, h4{
     line-height: 1;
     text-rendering: auto;
 }
+/*.main-content .row textarea{
+  width:400px; 
+overflow-y:visible;
+height: 300px;
+}*/
 /*# sourceMappingURL=index.css.map*/

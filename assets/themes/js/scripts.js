@@ -1,1 +1,1 @@
-import codeMirror from '../../base/codemirror';
+import {codeMirror} from '../../base/codemirror';
