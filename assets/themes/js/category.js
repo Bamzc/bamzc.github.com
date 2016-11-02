@@ -18,17 +18,16 @@ class category{
     }
     ajaxHandlerComments(cb,key){
     	$.ajax({
-			url : 'http://api.duoshuo.com/threads/counts.json',
-			type : 'get',
-			data : {
+			url:'https://api.duoshuo.com/threads/counts.jsonp',
+			type:'get',
+			data:{
 				short_name : 'bamzc',
 				threads : key
 			},
-			dataType : 'jsonp',
-			success : function (res) {
-				console.log(res)
+			dataType:'jsonp',
+			success:function (res) {
 				if(res.code == 0){
-					cb(res);
+					cb(res.response[key]);
 				}
 				
 			}
@@ -50,10 +49,8 @@ let comments = $('.comments-link');
 if(comments.length > 0){
 	comments.each((k,v) => {
 		let comments_a = $(v).find('a');
-		console.log(comments_a.data('thread-key')+"------")
 		cm.ajaxHandlerComments(function(res){
-			console.log(res)
-			comments_a.find('i').html(res.response.comments);
+			comments_a.find('i').html(res.comments);
 		},comments_a.data('thread-key'));
 	});
 }

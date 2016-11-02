@@ -9,7 +9,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 //webpack插件
 var plugins = [
     //提公用js到common.js文件中
-    new webpack.optimize.CommonsChunkPlugin('js/common.js'),
+    // new webpack.optimize.CommonsChunkPlugin('js/common.js'),
     //将样式统一发布到style.css中
     new ExtractTextPlugin("css/[name].css", {
         allChunks: true,

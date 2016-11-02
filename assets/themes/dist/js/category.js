@@ -1,4 +1,46 @@
-webpackJsonp([0,4],[
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/assets/themes/dist/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -46,7 +88,7 @@ webpackJsonp([0,4],[
 			key: 'ajaxHandlerComments',
 			value: function ajaxHandlerComments(cb, key) {
 				$.ajax({
-					url: 'http://api.duoshuo.com/threads/counts.json',
+					url: 'https://api.duoshuo.com/threads/counts.jsonp',
 					type: 'get',
 					data: {
 						short_name: 'bamzc',
@@ -54,9 +96,8 @@ webpackJsonp([0,4],[
 					},
 					dataType: 'jsonp',
 					success: function success(res) {
-						console.log(res);
 						if (res.code == 0) {
-							cb(res);
+							cb(res.response[key]);
 						}
 					}
 				});
@@ -79,10 +120,8 @@ webpackJsonp([0,4],[
 	if (comments.length > 0) {
 		comments.each(function (k, v) {
 			var comments_a = $(v).find('a');
-			console.log(comments_a.data('thread-key') + "------");
 			cm.ajaxHandlerComments(function (res) {
-				console.log(res);
-				comments_a.find('i').html(res.response.comments);
+				comments_a.find('i').html(res.comments);
 			}, comments_a.data('thread-key'));
 		});
 	}
@@ -5881,5 +5920,5 @@ webpackJsonp([0,4],[
 	// removed by extract-text-webpack-plugin
 
 /***/ }
-]);
+/******/ ]);
 //# sourceMappingURL=category.js.map
