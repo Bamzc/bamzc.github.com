@@ -38,7 +38,7 @@ Usage:
         </div>
         <div class="post-content post-expect">
           <p>{{post.brief}}
-        <a class="more-link btn btn-primary btn-xs" href="{{post.id}}#{{post.date | date: "%H%M"}}">阅读全文{{post.date | date: "%H-%M-%S"}}</a>
+        <a class="more-link btn btn-primary btn-xs" href="{{post.id}}#{{post.date | date: "%H%M"}}">阅读全文</a>
         </p>
         </div>
         <div class="meta-box">
