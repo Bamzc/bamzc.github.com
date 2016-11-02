@@ -26,42 +26,66 @@ webpackJsonp([0,4],[
 	__webpack_require__(88);
 	__webpack_require__(89);
 	
-	var loadCodeMirrorWay = function () {
-	    function loadCodeMirrorWay() {
-	        (0, _classCallCheck3.default)(this, loadCodeMirrorWay);
-	    }
+	var category = function () {
+		function category() {
+			(0, _classCallCheck3.default)(this, category);
+		}
 	
-	    (0, _createClass3.default)(loadCodeMirrorWay, [{
-	        key: 'handler',
-	        value: function handler(el, way) {
-	            el.each(function (k, v) {
-	                _codemirror.CodeMirror.fromTextArea(v, {
-	                    lineNumbers: true,
-	                    mode: way,
-	                    matchBrackets: true
-	                });
-	            });
-	        }
-	    }]);
-	    return loadCodeMirrorWay;
+		(0, _createClass3.default)(category, [{
+			key: 'handler',
+			value: function handler(el, way) {
+				el.each(function (k, v) {
+					_codemirror.CodeMirror.fromTextArea(v, {
+						lineNumbers: true,
+						mode: way,
+						matchBrackets: true
+					});
+				});
+			}
+		}, {
+			key: 'ajaxHandlerComments',
+			value: function ajaxHandlerComments(cb, key) {
+				$.ajax({
+					url: 'http://api.duoshuo.com/threads/counts.json',
+					type: 'get',
+					data: {
+						short_name: 'bamzc',
+						threads: key
+					},
+					dataType: 'jsonp',
+					success: function success(res) {
+						console.log(res);
+						if (res.code == 0) {
+							cb(res);
+						}
+					}
+				});
+			}
+		}]);
+		return category;
 	}();
 	
-	var cm = new loadCodeMirrorWay();
+	var cm = new category();
 	var cm_textarea = $('.cm_textarea');
 	var _script = $('.cm_textarea_script');
 	var _css = $('.cm_textarea_css');
+	
 	cm_textarea.length > 0 && cm.handler(cm_textarea, 'text/html');
 	_script.length > 0 && cm.handler(_script, 'javascript');
 	_css.length > 0 && cm.handler(_css, 'css');
 	
-	var duoshuoQuery = { short_name: "bamzc" };
-	(function () {
-	    var ds = document.createElement('script');
-	    ds.type = 'text/javascript';ds.async = true;
-	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	    ds.charset = 'UTF-8';
-	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
+	var comments = $('.comments-link');
+	
+	if (comments.length > 0) {
+		comments.each(function (k, v) {
+			var comments_a = $(v).find('a');
+			console.log(comments_a.data('thread-key') + "------");
+			cm.ajaxHandlerComments(function (res) {
+				console.log(res);
+				comments_a.find('i').html(res.response.comments);
+			}, comments_a.data('thread-key'));
+		});
+	}
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
