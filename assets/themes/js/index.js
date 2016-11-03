@@ -1,5 +1,4 @@
 'use strict'
-require('../css/main.css');
 import '../../base/jquery.sequence-min';
 import '../../base/bootstrap.min';
 var a = function() {

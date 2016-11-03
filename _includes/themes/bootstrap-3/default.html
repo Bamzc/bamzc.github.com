@@ -12,8 +12,10 @@
     <link href="{{ ASSET_PATH }}/themes/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css">
     <!-- single page styles -->
-    {% if page.sl_name !=null %}
-    <link href="{{ ASSET_PATH }}/css/{{page.sl_name}}.css" rel="stylesheet" type="text/css">
+    {% if page.loadCss !=null %}
+        {% for css in page.loadCss %}
+            <link href="{{ ASSET_PATH }}/css/{{css}}.css" rel="stylesheet" type="text/css">
+        {% endfor %}
     {% endif %}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,8 +69,10 @@
     </div>
     {% include JB/analytics %}
     <script src="{{ ASSET_PATH }}/js/common.js"></script>
-    {% if page.sl_name !=null %}
-    <script src="{{ ASSET_PATH }}/js/{{page.sl_name}}.js"></script>
+    {% if page.loadJs !=null %}
+        {% for js in page.loadJs %}
+            <script src="{{ ASSET_PATH }}/js/{{js}}.js"></script>
+        {% endfor %}
     {% endif %}
   </body>
 </html>

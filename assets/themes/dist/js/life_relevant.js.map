@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./assets/themes/js/life_relevant.js"],"names":[],"mappings":";;;;;;AAAA,wB","file":"js/life_relevant.js","sourcesContent":["import '../../base/bootstrap.min'; \n\n\n/** WEBPACK FOOTER **\n ** ./assets/themes/js/life_relevant.js\n **/"],"sourceRoot":""}

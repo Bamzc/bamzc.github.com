@@ -19,8 +19,7 @@ var plugins = [
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      'bootstrap': 'bootstrap'
+      'window.jQuery': 'jquery'
     })
 ];
 
@@ -71,8 +70,7 @@ module.exports = {
         extension: ['', '.js'],
         //别名
         alias: {
-            jquery: path.join(__dirname, 'assets/base/jquery-2.1.4'),
-            bootstrap: path.join(__dirname, 'assets/base/bootstrap')
+            jquery: path.join(__dirname, 'assets/base/jquery-2.1.4')
         }
     },
     plugins: plugins,

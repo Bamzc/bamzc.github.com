@@ -1,33 +1,33 @@
-webpackJsonp([0],{
+webpackJsonp([4],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 	
-	var _classCallCheck2 = __webpack_require__(74);
+	var _classCallCheck2 = __webpack_require__(76);
 	
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 	
-	var _createClass2 = __webpack_require__(75);
+	var _createClass2 = __webpack_require__(77);
 	
 	var _createClass3 = _interopRequireDefault(_createClass2);
 	
-	var _codemirror = __webpack_require__(79);
-	
-	__webpack_require__(83);
-	
-	__webpack_require__(84);
+	var _codemirror = __webpack_require__(81);
 	
 	__webpack_require__(85);
 	
+	__webpack_require__(86);
+	
 	__webpack_require__(87);
+	
+	__webpack_require__(1);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(88);
 	__webpack_require__(89);
 	__webpack_require__(90);
+	__webpack_require__(91);
 	
 	var category = function () {
 		function category() {
@@ -86,11 +86,11 @@ webpackJsonp([0],{
 			}, comments_a.data('thread-key'));
 		});
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
 
-/***/ 74:
+/***/ 76:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -105,14 +105,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 75:
+/***/ 77:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _defineProperty = __webpack_require__(76);
+	var _defineProperty = __webpack_require__(78);
 	
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
 	
@@ -138,37 +138,37 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 76:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(77), __esModule: true };
-
-/***/ },
-
-/***/ 77:
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(78);
-	var $Object = __webpack_require__(8).Object;
-	module.exports = function defineProperty(it, key, desc){
-	  return $Object.defineProperty(it, key, desc);
-	};
-
-/***/ },
-
 /***/ 78:
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export = __webpack_require__(6);
-	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-	$export($export.S + $export.F * !__webpack_require__(16), 'Object', {defineProperty: __webpack_require__(12).f});
+	module.exports = { "default": __webpack_require__(79), __esModule: true };
 
 /***/ },
 
 /***/ 79:
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.CodeMirror=undefined;var _create=__webpack_require__(80);var _create2=_interopRequireDefault(_create);var _typeof2=__webpack_require__(37);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// CodeMirror, copyright (c) by Marijn Haverbeke and others
+	__webpack_require__(80);
+	var $Object = __webpack_require__(9).Object;
+	module.exports = function defineProperty(it, key, desc){
+	  return $Object.defineProperty(it, key, desc);
+	};
+
+/***/ },
+
+/***/ 80:
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(7);
+	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+	$export($export.S + $export.F * !__webpack_require__(17), 'Object', {defineProperty: __webpack_require__(13).f});
+
+/***/ },
+
+/***/ 81:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.CodeMirror=undefined;var _create=__webpack_require__(82);var _create2=_interopRequireDefault(_create);var _typeof2=__webpack_require__(38);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// CodeMirror, copyright (c) by Marijn Haverbeke and others
 	// Distributed under an MIT license: http://codemirror.net/LICENSE
 	// This is CodeMirror (http://codemirror.net), a code editor
 	// implemented in JavaScript on top of the browser's DOM.
@@ -1159,43 +1159,43 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 80:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(81), __esModule: true };
-
-/***/ },
-
-/***/ 81:
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(82);
-	var $Object = __webpack_require__(8).Object;
-	module.exports = function create(P, D){
-	  return $Object.create(P, D);
-	};
-
-/***/ },
-
 /***/ 82:
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export = __webpack_require__(6)
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	$export($export.S, 'Object', {create: __webpack_require__(47)});
+	module.exports = { "default": __webpack_require__(83), __esModule: true };
 
 /***/ },
 
 /***/ 83:
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(84);
+	var $Object = __webpack_require__(9).Object;
+	module.exports = function create(P, D){
+	  return $Object.create(P, D);
+	};
+
+/***/ },
+
+/***/ 84:
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(7)
+	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+	$export($export.S, 'Object', {create: __webpack_require__(48)});
+
+/***/ },
+
+/***/ 85:
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 	
-	var _typeof2 = __webpack_require__(37);
+	var _typeof2 = __webpack_require__(38);
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
-	var _codemirror = __webpack_require__(79);
+	var _codemirror = __webpack_require__(81);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1999,16 +1999,16 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 84:
+/***/ 86:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _typeof2 = __webpack_require__(37);
+	var _typeof2 = __webpack_require__(38);
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
-	var _codemirror = __webpack_require__(79);
+	var _codemirror = __webpack_require__(81);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -2564,12 +2564,12 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 85:
+/***/ 87:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _codemirror = __webpack_require__(79);
+	var _codemirror = __webpack_require__(81);
 	
 	(function (mod) {
 	  // if (typeof exports == "object" && typeof module == "object") // CommonJS
@@ -2577,7 +2577,7 @@ webpackJsonp([0],{
 	  // else if (typeof define == "function" && define.amd) // AMD
 	  //   define(["./codemirror", "./xml", "./javascript", "./css"], mod);
 	  // else // Plain browser env
-	  mod(_codemirror.CodeMirror, __webpack_require__(86), __webpack_require__(83), __webpack_require__(84));
+	  mod(_codemirror.CodeMirror, __webpack_require__(88), __webpack_require__(85), __webpack_require__(86));
 	})(function (CodeMirror) {
 	  "use strict";
 	
@@ -2712,12 +2712,12 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 86:
+/***/ 88:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _codemirror = __webpack_require__(79);
+	var _codemirror = __webpack_require__(81);
 	
 	(function (mod) {
 	  mod(_codemirror.CodeMirror);
@@ -3093,13 +3093,6 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 88:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
 /***/ 89:
 /***/ function(module, exports) {
 
@@ -3112,7 +3105,14 @@ webpackJsonp([0],{
 
 	// removed by extract-text-webpack-plugin
 
+/***/ },
+
+/***/ 91:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
 /***/ }
 
 });
-//# sourceMappingURL=category.js.map
+//# sourceMappingURL=study_relevant.js.map

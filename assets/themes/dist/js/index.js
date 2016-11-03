@@ -5,11 +5,9 @@ webpackJsonp([1],{
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 	
-	__webpack_require__(91);
+	__webpack_require__(75);
 	
-	__webpack_require__(87);
-	
-	__webpack_require__(88);
+	__webpack_require__(1);
 	
 	var a = function () {
 	    function a() {
@@ -61,23 +59,16 @@ webpackJsonp([1],{
 	        i = 1;
 	    $("#scroll_box").css("width", d * e), setInterval(b, h);
 	})();
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
 
-/***/ 88:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 91:
+/***/ 75:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {"use strict";
 	
-	var _typeof2 = __webpack_require__(37);
+	var _typeof2 = __webpack_require__(38);
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
@@ -499,7 +490,7 @@ webpackJsonp([1],{
 			});
 		};
 	})(jQuery);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }
 
