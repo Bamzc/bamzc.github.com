@@ -1,1 +1,1 @@
-import {codeMirror} from '../../base/codemirror';
+import '../../base/bootstrap.min'

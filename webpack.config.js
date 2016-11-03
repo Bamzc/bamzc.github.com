@@ -9,7 +9,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 //webpack插件
 var plugins = [
     //提公用js到common.js文件中
-    // new webpack.optimize.CommonsChunkPlugin('js/common.js'),
+    new webpack.optimize.CommonsChunkPlugin('js/common.js'),
     //将样式统一发布到style.css中
     new ExtractTextPlugin("css/[name].css", {
         allChunks: true,
@@ -19,7 +19,8 @@ var plugins = [
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
+      'bootstrap': 'bootstrap'
     })
 ];
 
@@ -70,7 +71,8 @@ module.exports = {
         extension: ['', '.js'],
         //别名
         alias: {
-            jquery: path.join(__dirname, 'assets/base/jquery-2.1.4')
+            jquery: path.join(__dirname, 'assets/base/jquery-2.1.4'),
+            bootstrap: path.join(__dirname, 'assets/base/bootstrap')
         }
     },
     plugins: plugins,

@@ -5,6 +5,7 @@ import {CodeMirror} from '../../base/codemirror/codemirror';
 import '../../base/codemirror/javascript.js';
 import '../../base/codemirror/css.js';
 import '../../base/codemirror/htmlmixed.js';
+import '../../base/bootstrap.min';
 
 class category{
     handler(el,way){
