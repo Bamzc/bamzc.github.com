@@ -37,6 +37,8 @@ author :
 #
 production_url : https://bamzc.github.io
 
+baseurl : /
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
