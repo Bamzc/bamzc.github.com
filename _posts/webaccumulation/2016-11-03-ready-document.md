@@ -5,7 +5,7 @@ tags: ['ready','document']
 categorys: ['网站','文档加载']
 header: ready_document
 tagline: dom加载ready方法实现
-date: 2016-11-03 11:00:21
+date: 2016-11-03 10:21:00
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
 category: webacc

@@ -1,11 +1,11 @@
 ---
 layout: study
-title : session与cookie
+title : 我的jekyll之旅，记录点点滴滴
 tags: ['jekyll','blog']
 categorys: ['网站','博客']
-header: session与cookie
-tagline: session与cookie
-date: 2016-10-15 19:20:21
+header: jekyll
+tagline: 我的jekyll之旅，记录点点滴滴
+date: 2016-11-02 19:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
 category: study
