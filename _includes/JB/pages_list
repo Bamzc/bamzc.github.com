@@ -41,7 +41,7 @@ Usage:
             {% if node.menu_list != null %}
               <ul class="dropdown-menu bounceOutDown animated">
               {% for child in node.menu_list %}
-              <li><a title="" target="_self" href="../{{child.first}}">{{child.last}}</a></li>
+              <li><a title="" target="_self" href="{{site.production_url}}/{{child.first}}">{{child.last}}</a></li>
               {% endfor %}
               </ul>
             {% endif %}
