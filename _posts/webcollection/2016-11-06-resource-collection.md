@@ -5,7 +5,7 @@ tags: ['资源','教程']
 categorys: ['web','前端']
 header: resource_colle
 tagline: 前端资源教程
-date: 2016-11-04 17:21:00
+date: 2016-11-06 17:21:00
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
 category: webcolle
