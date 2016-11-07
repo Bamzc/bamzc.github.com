@@ -5,7 +5,7 @@ tags: ['storage','cookie']
 categorys: ['web','存储']
 header: storage_cookie
 tagline: 对Storage和cookie的封装
-date: 2016-11-03 17:21:00
+date: 2016-11-04 17:21:00
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
 category: webacc
