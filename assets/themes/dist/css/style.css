@@ -1140,9 +1140,12 @@ h3, h4{
   border-bottom: 1px dashed #cacaca;
   padding-bottom:30px;
 }
-.post-container ul li{
+.post-container ol,ul{
   list-style-type: none;
-  text-indent: 2em;
+  margin: 0 0 10px 25px;
+}
+.post-container li{
+  line-height: 2em;
 }
 .post-container-category{
     border-bottom: 0px;
@@ -1218,9 +1221,4 @@ h3, h4{
     line-height: 1;
     text-rendering: auto;
 }
-/*.main-content .row textarea{
-  width:400px; 
-overflow-y:visible;
-height: 300px;
-}*/
 /*# sourceMappingURL=style.css.map*/
