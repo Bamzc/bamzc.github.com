@@ -12,11 +12,6 @@ category: webcolle
 brief: 前端资源合集， 前端资源教程。
 group: navigation
 ---
-原文地址:https://cnodejs.org/topic/56ef3edd532839c33a99d00e
-
-<p>来自CNode社区的大神i5ting的收集，mark以后，果断搬过来。</p>
-
-
 <p><a href="https://github.com/AutumnsWind/Front-end-tutorial">资源教程</a></p>
 <ol>
 <li>
@@ -1161,3 +1156,7 @@ group: navigation
 </ul>
 </li>
 </ol>
+
+<p>原文地址:<a href="https://cnodejs.org/topic/56ef3edd532839c33a99d00e" target="_blank">https://cnodejs.org/topic/56ef3edd532839c33a99d00e</a></p>
+
+<p>来自CNode社区的大神i5ting的收集，mark以后，果断搬过来。</p>
