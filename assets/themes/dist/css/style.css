@@ -363,6 +363,10 @@ html,body{
   text-decoration: none;
   color: #fff;
 }
+#sequence > .sequence-canvas > li p.recommend-index{
+  text-align: right;
+  padding: 10px;
+}
 #sequence > .sequence-canvas > li a:focus,a:hover{
   text-decoration: none;
   color: #fff;

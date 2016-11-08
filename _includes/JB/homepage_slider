@@ -5,9 +5,9 @@
             <!-- Slide 1 -->
             <li class="bg7">
                 <!-- Slide Title -->
-                <h2 class="title"><a href="/a">智取威虎山</a></h2>
+                <h2 class="title"><a href="https://cnodejs.org/topic/56f33de702c237a73a1a8ab1">一名全栈工程师Node.js之路</a></h2>
                 <!-- Slide Text -->
-                <h3 class="subtitle"><a href="/a">《智取威虎山3D》是徐克执导的一部3D谍战动作电影，由张涵予、梁家辉、林更新、余男、佟丽娅主演。</a></h3>
+                <h3 class="subtitle"><a href="https://cnodejs.org/topic/56f33de702c237a73a1a8ab1">“JavaScript 是世界上使用最广泛的语言，没有之一，包括后端开发工程师也更爱使用 JavaScript。”  ——stackoverflow</a><p class="recommend-index">推荐指数★★★★</p></h3>
                 <!-- Slide Image -->
                 <!-- <img class="slide-img" src="img/11.jpg" alt="Slide 1" /> -->
             </li>
@@ -15,9 +15,9 @@
             <!-- Slide 2 -->
             <li class="bg6">
                 <!-- Slide Title -->
-                <h2 class="title"><a href="/a">超能陆战队</a></h2>
+                <h2 class="title"><a href="https://bamzc.github.io/webcolle/2016/11/06/resource-collection#1721">前端资源教程 </a></h2>
                 <!-- Slide Text -->
-                <h3 class="subtitle"><a href="/a">《超能陆战队》（Big Hero 6）是迪士尼与漫威联合出品的第一部动画电影，取材于由Steven T. Seagle和Duncan Rouleau在1998年开始连载的以日本为背景的动作科幻类漫画。影片由唐·霍尔及克里斯·威廉姆斯联袂执导，瑞恩·波特、斯科特·埃德希特、T·J·米勒主演配音。</a></h3>
+                <h3 class="subtitle"><a href="https://bamzc.github.io/webcolle/2016/11/06/resource-collection#1721">桑老师收集的超强资源合集————只有你想不到的，没有你看不到的！涉及到各方各面，果断mark以后分享给大家。</a><p class="recommend-index">推荐指数★★★★★</p></h3>
                 <!-- Slide Image -->
                 <!-- <img class="slide-img" src="img/11.jpg" alt="Slide 2" /> -->
             </li>
@@ -25,25 +25,25 @@
             <!-- Slide 3 -->
             <li class="bg5">
                 <!-- Slide Title -->
-                <h2 class="title"><a href="/a">战狼</a></h2>
+                <h2 class="title"><a href="http://es6.ruanyifeng.com/">ECMAScript 6入门</a></h2>
                 <!-- Slide Text -->
-                <h3 class="subtitle"><a href="/a">《战狼》是由吴京执导的现代军事战争片，该片由吴京，余男、倪大红、斯科特·阿金斯 、周晓鸥等主演。</a></h3>
+                <h3 class="subtitle"><a href="http://es6.ruanyifeng.com/">在新技术漫天飞的状况下，似乎不跟技术前沿沾点边就跟不上技术潮流。在未来趋势下，ES6可谓大热点。看了阮一峰老师的这本书感受颇深，也感受到了ES6的强大之处。</a><p class="recommend-index">推荐指数★★★★★</p></h3>
                 <!-- Slide Image -->
                 <!-- <img class="slide-img" src="img/11.jpg" alt="Slide 3" /> -->
             </li>
             <li class="bg12">
                 <!-- Slide Title -->
-                <h2 class="title"><a href="/a">速度与激情7</a></h2>
+                <h2 class="title"><a href="https://bamzc.github.io/webcolle/2016/11/07/jser-zb#1721">JSer超强装逼手册</a></h2>
                 <!-- Slide Text -->
-                <h3 class="subtitle"><a href="/a">《速度与激情7》（Furious 7）是环球影业出品的一部赛车题材动作片，是《速度与激情》系列的第7部，由温子仁执导，范·迪塞尔、保罗·沃克、杰森·斯坦森、米歇尔·罗德里格兹、道恩·强森等主演。</a></h3>
+                <h3 class="subtitle"><a href="https://bamzc.github.io/webcolle/2016/11/07/jser-zb#1721">在装逼成本越来越高的JS圈，是时候充值一下了。诙谐幽默的口风，灰常nice。虽然言辞犀利，但是不得不说，前端行情就是这样！是时候装一下了！</a><p class="recommend-index">推荐指数★★★★</p></h3>
                 <!-- Slide Image -->
                 <!-- <img class="slide-img" src="img/11.jpg" alt="Slide 3" /> -->
             </li>
             <li class="bg11">
                 <!-- Slide Title -->
-                <h2 class="title"><a href="/a">霍比特人3：五军之战</a></h2>
+                <h2 class="title"><a href="https://github.com/shinygang/Vue-cnodejs">基于vue的Cnodejs社区</a></h2>
                 <!-- Slide Text -->
-                <h3 class="subtitle"><a href="/a">《霍比特人：五军之战》(The Hobbit: The Battle of the Five Armies)是彼得·杰克逊执导的《霍比特人》系列魔幻冒险电影的最终章，改编自托尔金小说，由华纳兄弟影片公司、新线电影公司 、 米高梅电影公司联合出品，马丁·弗瑞曼、伊恩·麦克莱恩、理查德·阿米蒂奇、本尼迪克特·康伯巴奇主演。</a></h3>
+                <h3 class="subtitle"><a href="https://github.com/shinygang/Vue-cnodejs">唐岗大神的作品，基于vue.js重写Cnodejs.org社区的webapp。根据源码敲一遍，绝对能让你飞起来！技术栈是Vue.js+webpack+ES6。灰常适合小伙伴们学习！</a><p class="recommend-index">推荐指数★★★★★</p></h3>
                 <!-- Slide Image -->
                 <!-- <img class="slide-img" src="img/11.jpg" alt="Slide 3" /> -->
             </li>
