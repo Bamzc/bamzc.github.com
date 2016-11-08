@@ -39,7 +39,8 @@ production_url : https://bamzc.github.io
 #production_url : http://localhost:4000
 
 baseurl : /
-
+host : localhost
+port : 4000
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :

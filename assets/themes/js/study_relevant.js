@@ -1,4 +1,3 @@
-require('../css/main.css');
 require('../css/codemirror.css');
 require('../css/foldgutter.css');
 import {CodeMirror} from '../../base/codemirror/codemirror';

@@ -1,0 +1,13 @@
+---
+layout: page
+title: 我的作品
+header: 我的作品
+tagline: 分类列表：我的作品
+message: 天才，就其本质而说，只不过是一种对事业、对工作过盛的热爱而已。
+category: mywork
+loadJs: ['study_relevant']
+permalink: /mywork/
+---
+{% include JB/setup %}
+{% assign posts_collate = site.categorys %}
+{% include JB/posts_collate %}
