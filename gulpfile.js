@@ -17,7 +17,7 @@ gulp.task('webpack', function(cb) {
  *  压缩js
  */
 gulp.task('script',function(){
-    gulp.src('./assets/themes/dist/js/*.js')
+    gulp.src('./assets/src/dist/js/*.js')
     // .pipe(rename({suffix:'.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
@@ -26,7 +26,7 @@ gulp.task('script',function(){
  *  压缩css文件
  */
 gulp.task('style',function() {
-    gulp.src('./assets/themes/dist/css/*.css')
+    gulp.src('./assets/src/dist/css/*.css')
     //.pipe(rename({suffix:'.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('assets/css'));
@@ -35,9 +35,9 @@ gulp.task('style',function() {
  *  监听器
  */
 gulp.task("watch",function(cb){
-    gulp.watch('assets/themes/js/**/*.js', ['webpack']);
-    gulp.watch('assets/themes/dist/js/*.js', ['script']);
-    gulp.watch('assets/themes/dist/css/*.css', ['style']);
+    gulp.watch('assets/src/js/**/*.js', ['webpack']);
+    gulp.watch('assets/src/dist/js/*.js', ['script']);
+    gulp.watch('assets/src/dist/css/*.css', ['style']);
 })
 
 gulp.task('default', ['webpack'] ,function() {

@@ -315,46 +315,46 @@ html,body{
   background-position: -50px 0;
 }
 #sequence > .sequence-canvas > li.bg1 {
-  background-image: url(/assets/themes/dist/images/a631640bc91b3e10dbc89f0336a7c8cd.jpg);
+  background-image: url(/assets/src/dist/images/a631640bc91b3e10dbc89f0336a7c8cd.jpg);
 }
 #sequence > .sequence-canvas > li.bg2 {
-  background-image: url(/assets/themes/dist/images/712c2500892ee283f7b898571d89b081.jpg);
+  background-image: url(/assets/src/dist/images/712c2500892ee283f7b898571d89b081.jpg);
 }
 #sequence > .sequence-canvas > li.bg3 {
-  background-image: url(/assets/themes/dist/images/282edd4da3a86e50752de8cede77a7f2.jpg);
+  background-image: url(/assets/src/dist/images/282edd4da3a86e50752de8cede77a7f2.jpg);
 }
 #sequence > .sequence-canvas > li.bg4 {
-  background-image: url(/assets/themes/dist/images/97f8867a7597734e2840376177f8e94e.jpg);
+  background-image: url(/assets/src/dist/images/97f8867a7597734e2840376177f8e94e.jpg);
 }
 #sequence > .sequence-canvas > li.bg5 {
-  background-image: url(/assets/themes/dist/images/ced732dfb236641341161a9edaee885f.jpg);
+  background-image: url(/assets/src/dist/images/ced732dfb236641341161a9edaee885f.jpg);
 }
 #sequence > .sequence-canvas > li.bg6 {
-  background-image: url(/assets/themes/dist/images/d61b3c836b1982f1263da55475e9d383.jpg);
+  background-image: url(/assets/src/dist/images/d61b3c836b1982f1263da55475e9d383.jpg);
 }
 #sequence > .sequence-canvas > li.bg7 {
-  background-image: url(/assets/themes/dist/images/23bf2079287c104a07aee2d15dc22851.jpg);
+  background-image: url(/assets/src/dist/images/23bf2079287c104a07aee2d15dc22851.jpg);
 }
 #sequence > .sequence-canvas > li.bg8 {
-  background-image: url(/assets/themes/dist/images/9d84c74f75b5af318c9e4e80965b03fd.jpg);
+  background-image: url(/assets/src/dist/images/9d84c74f75b5af318c9e4e80965b03fd.jpg);
 }
 #sequence > .sequence-canvas > li.bg9 {
-  background-image: url(/assets/themes/dist/images/0d8e13f1a72194a852f32df0e61390b6.jpg);
+  background-image: url(/assets/src/dist/images/0d8e13f1a72194a852f32df0e61390b6.jpg);
 }
 #sequence > .sequence-canvas > li.bg10 {
-  background-image: url(/assets/themes/dist/images/40a7f72378d14b9b38f1aba82bbf2915.jpg);
+  background-image: url(/assets/src/dist/images/40a7f72378d14b9b38f1aba82bbf2915.jpg);
 }
 #sequence > .sequence-canvas > li.bg11 {
-  background-image: url(/assets/themes/dist/images/016aeddfc5610bc633a1a598b11aceb1.jpg);
+  background-image: url(/assets/src/dist/images/016aeddfc5610bc633a1a598b11aceb1.jpg);
 }
 #sequence > .sequence-canvas > li.bg12 {
-  background-image: url(/assets/themes/dist/images/0210873b48bc7ed2f7c1e0304fd5108c.jpg);
+  background-image: url(/assets/src/dist/images/0210873b48bc7ed2f7c1e0304fd5108c.jpg);
 }
 #sequence > .sequence-canvas > li.bg13 {
-  background-image: url(/assets/themes/dist/images/f887acbfec17ea561c9131cff4070d7a.jpg);
+  background-image: url(/assets/src/dist/images/f887acbfec17ea561c9131cff4070d7a.jpg);
 }
 #sequence > .sequence-canvas > li.bg14 {
-  background-image: url(/assets/themes/dist/images/2984eab83d9c70d9fbad47721a655222.jpg);
+  background-image: url(/assets/src/dist/images/2984eab83d9c70d9fbad47721a655222.jpg);
 }
 #sequence > .sequence-canvas > li img {
   height: 96%;
