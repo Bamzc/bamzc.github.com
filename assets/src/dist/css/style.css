@@ -1127,6 +1127,7 @@ h3, h4{
 }
 .row .post-container{
   padding-left: 4%;
+  padding-right: 4%
 }
 .main-content a{
   color:#dd4814;
@@ -1159,22 +1160,37 @@ h3, h4{
   line-height: 2;
   margin: 5px 0;
 }
+.post-container .center{
+  text-align: center;
+  text-indent: 0em;
+  margin: 0;
+  padding: 0;
+}
 .main-content .btn{
   text-indent: 0;
 }
-.main-content .btn:focus,.btn:hover{
+.main-content .btn:focus,.main-content .btn:hover{
   color: #fff;
 }
-
-.main-content .row .meta-box{
-  
+.post-container .note-warning{
+  color: #CD0000;
+  font-weight: 700;
+  top: 15px;
 }
-.main-content .row .meta-box .m-post-date{
-  
+.post-container .note-warning h4{
+  color: #CD0000;
+  margin: 0px;
+  font-weight: 700;
+  text-indent: 2em;
 }
-
-.main-content .row .meta-box .comments-link{
-  
+.post-container .note-warning .content{
+  margin-left: 35px;
+}
+.post-container .note-warning:before{
+  content: "\203C";
+  font-size: 30px;
+  margin: 6px 0px 0px 0px;
+  position: absolute;
 }
 .main-content .row .meta-box span{
   padding: 0 10px 0 2px;
@@ -1184,10 +1200,6 @@ h3, h4{
 }
 .post-container .post-expect a{
   vertical-align: text-bottom;
-}
-.post-container .post-expect p{
-    line-height: 2;
-    text-indent: 2em;
 }
 .post-container .btn-primary{
     background-color: #dd4814;

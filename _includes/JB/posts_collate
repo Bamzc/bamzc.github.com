@@ -16,47 +16,62 @@ Usage:
         => 'post.next.date'
         
 -->{% endcomment %}
-
+{% assign flag = 0 %}
 {% if site.JB.posts_collate.provider == "custom" %}
   {% include custom/posts_collate %}
 {% else %}
 {% for category in site.categories %}
   {% for post in category.last  %}
     {% if post.category == page.category %}
-        <div class="row">
-          <div class="col-md-12 post-container">
-          <h2 class="post-title">
-          <a rel="bookmark" href="{{post.id}}#{{post.date | date: "%H%M"}}">{{post.title}}</a>
-          </h2>
-        <div class="meta-box">
-        <span class="m-post-date">
-        <i class="fa fa-calendar-o"></i>{{ post.date | date: "%Y年%m月%d日" }}</span>
-        <span class="comments-link">
-          <a title="Comment on {{post.title}}" data-thread-key="{{post.id}}" class="ds-thread-count" href="{{post.id}}#comments" target="_self">
-          <i class="fa fa-comments-o">0</i> 条评论</a>
+      {% if forloop.index <= site.page_num %}
+          <div class="row">
+            <div class="col-md-12 post-container">
+            <h2 class="post-title">
+            <a rel="bookmark" href="{{post.id}}#{{post.date | date: "%H%M"}}">{{post.title}}</a>
+            </h2>
+          <div class="meta-box">
+          <span class="m-post-date">
+          <i class="fa fa-calendar-o"></i>{{ post.date | date: "%Y年%m月%d日" }}</span>
+          <span class="comments-link">
+            <a title="Comment on {{post.title}}" data-thread-key="{{post.id}}" class="ds-thread-count" href="{{post.id}}#comments" target="_self">
+            <i class="fa fa-comments-o">0</i> 条评论</a>
+            </span>
+          </div>
+          <div class="post-content post-expect">
+            <p>{{post.brief}}
+          <a class="more-link btn btn-primary btn-xs" href="{{post.id}}#more-{{post.date | date: "%H%M"}}">阅读全文</a>
+          </p>
+          </div>
+          <div class="meta-box">
+          <span class="cat-links"><i class="fa fa-navicon"></i><b>分类:</b>
+          {% for _category in post.categorys %}
+            <a rel="category tag" href="javascript:;" >{{_category}}</a>
+          {% endfor %} 
           </span>
-        </div>
-        <div class="post-content post-expect">
-          <p>{{post.brief}}
-        <a class="more-link btn btn-primary btn-xs" href="{{post.id}}#more-{{post.date | date: "%H%M"}}">阅读全文</a>
-        </p>
-        </div>
-        <div class="meta-box">
-        <span class="cat-links"><i class="fa fa-navicon"></i><b>分类:</b>
-        {% for _category in post.categorys %}
-          <a rel="category tag" href="javascript:;" >{{_category}}</a>
-        {% endfor %} 
-        </span>
-        <span class="tag-links"><i class="fa fa-tags"></i><b>标签:</b>
-        {% for _tag in post.tags %}
-            <a rel="tag" href="javascript:;" target="_self">{{_tag}}</a>
-        {% endfor %}
-        </span>
-        </div>
-        </div>
-        </div>
+          <span class="tag-links"><i class="fa fa-tags"></i><b>标签:</b>
+          {% for _tag in post.tags %}
+              <a rel="tag" href="javascript:;" target="_self">{{_tag}}</a>
+          {% endfor %}
+          </span>
+          </div>
+          </div>
+          </div>
+      {% endif %}
+      {% if category.last.size > site.page_num%}
+        {% assign flag = 1 %}
+      {% endif %}
     {% endif %}
-    {% endfor %}
+  {% endfor %}
 {% endfor %}
+
+{% if flag == 1 %}
+    <div class="row">
+      <div class="col-md-12 post-container">
+      <div class="post-content post-expect">
+      <p class="center"><a id="more-btn" class="more-link btn btn-primary btn-xs" href="javascript:;">浏览更多文章{{site.categories.category}}</a></p>
+      </div>
+      </div>
+    </div>
+{% endif %}
 {% endif %}
 {% assign posts_collate = nil %}

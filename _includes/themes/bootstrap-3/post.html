@@ -1,47 +1,60 @@
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  <h1>
+    {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}
+    {% if page.message %} <p>{{ page.message }}</p>{% endif %}
+  </h1>
 </div>
 
-<div class="row post-full">
-  <div class="col-xs-12">
-    <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
-    </div>
-    <div class="content">
-      {{ content }}
-    </div>
-
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}  
-
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
-  
-    <hr>
-    <ul class="pagination">
-    {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
-    {% else %}
-      <li class="prev disabled"><a>&larr; Previous</a></li>
-    {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-    {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
-    {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
-    {% endif %}
-    </ul>
-    <hr>
-    {% include JB/comments %}
-  </div>
+<div class="main-content">
+    {{ content }}
 </div>
+<ul class="pagination">
+    <li>
+        <a href="{{ site.baseurl}}/article/">
+            <span>首页</span>
+        </a>
+    </li>
+    <li>
+    {% if paginator.page == 1 %}
+        <span>&laquo;</span>
+    {% else %}
+        {% if paginator.previous_page == 1 %}
+        <a href="{{ site.baseurl}}/article/">
+        {% else %}
+        <a href="{{ site.baseurl}}/article/{{ paginator.previous_page }}">
+        {% endif %}
+            <span>&laquo;</span>
+        </a>
+    {% endif %}
+    </li>
+    {% for i in (1..paginator.total_pages) limit:9 offset:{{paginator.page-1}} %}
+        {% if paginator.page == i %}
+    <li class="active">
+        {% else %}
+    <li>
+        {% endif %}
+        {% if i == 1 %}
+        <a href="{{site.baseurl}}/article">{{i}}</a>
+        {% else %}
+        <a href="{{site.baseurl}}/article/{{i}}">{{i}}</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+    <li>
+        {% if paginator.page == paginator.total_pages %}
+        <span>&raquo;</span>
+        {% else %}
+        <a href="{{ site.baseurl}}/article/{{ paginator.next_page }}">
+            <span>&raquo;</span>
+        </a>
+        {% endif %}
+    </li>
+    <li>
+        <a href="{{ site.baseurl}}/article/{{paginator.total_pages}}">
+            <span>末页</span>
+        </a>
+    </li>
+    <li class="disabled">
+        <span>第{{paginator.page}}页 / 共{{paginator.total_pages}}页</span>
+    </li>
+</ul>

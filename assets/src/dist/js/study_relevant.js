@@ -3,48 +3,47 @@ webpackJsonp([4],{
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-	
-	var _classCallCheck2 = __webpack_require__(76);
-	
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-	
-	var _createClass2 = __webpack_require__(77);
-	
-	var _createClass3 = _interopRequireDefault(_createClass2);
-	
-	var _codemirror = __webpack_require__(81);
-	
-	__webpack_require__(85);
-	
-	__webpack_require__(86);
-	
-	__webpack_require__(87);
+	'use strict';
 	
 	__webpack_require__(1);
 	
+	var _Codemirror = __webpack_require__(82);
+	
+	var _Codemirror2 = _interopRequireDefault(_Codemirror);
+	
+	var _Comments = __webpack_require__(76);
+	
+	var _Comments2 = _interopRequireDefault(_Comments);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
+
+/***/ 76:
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _classCallCheck2 = __webpack_require__(77);
+	
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+	
+	var _createClass2 = __webpack_require__(78);
+	
+	var _createClass3 = _interopRequireDefault(_createClass2);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(89);
-	__webpack_require__(90);
-	
-	var category = function () {
-		function category() {
-			(0, _classCallCheck3.default)(this, category);
+	var Comments = function () {
+		function Comments() {
+			(0, _classCallCheck3.default)(this, Comments);
 		}
 	
-		(0, _createClass3.default)(category, [{
-			key: 'handler',
-			value: function handler(el, way) {
-				el.each(function (k, v) {
-					_codemirror.CodeMirror.fromTextArea(v, {
-						lineNumbers: true,
-						mode: way,
-						matchBrackets: true
-					});
-				});
-			}
-		}, {
+		(0, _createClass3.default)(Comments, [{
 			key: 'ajaxHandlerComments',
 			value: function ajaxHandlerComments(cb, key) {
 				$.ajax({
@@ -63,17 +62,10 @@ webpackJsonp([4],{
 				});
 			}
 		}]);
-		return category;
+		return Comments;
 	}();
 	
-	var cm = new category();
-	var cm_textarea = $('.cm_textarea');
-	var _script = $('.cm_textarea_script');
-	var _css = $('.cm_textarea_css');
-	
-	cm_textarea.length > 0 && cm.handler(cm_textarea, 'text/html');
-	_script.length > 0 && cm.handler(_script, 'javascript');
-	_css.length > 0 && cm.handler(_css, 'css');
+	var cm = new Comments();
 	
 	var comments = $('.comments-link');
 	
@@ -85,11 +77,13 @@ webpackJsonp([4],{
 			}, comments_a.data('thread-key'));
 		});
 	}
+	
+	exports.default = cm;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
 
-/***/ 76:
+/***/ 77:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -104,14 +98,14 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 77:
+/***/ 78:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _defineProperty = __webpack_require__(78);
+	var _defineProperty = __webpack_require__(79);
 	
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
 	
@@ -137,17 +131,17 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 78:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(79), __esModule: true };
-
-/***/ },
-
 /***/ 79:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(80);
+	module.exports = { "default": __webpack_require__(80), __esModule: true };
+
+/***/ },
+
+/***/ 80:
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(81);
 	var $Object = __webpack_require__(9).Object;
 	module.exports = function defineProperty(it, key, desc){
 	  return $Object.defineProperty(it, key, desc);
@@ -155,7 +149,7 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 80:
+/***/ 81:
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(7);
@@ -164,10 +158,78 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 81:
+/***/ 82:
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.CodeMirror=undefined;var _create=__webpack_require__(82);var _create2=_interopRequireDefault(_create);var _typeof2=__webpack_require__(38);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// CodeMirror, copyright (c) by Marijn Haverbeke and others
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _classCallCheck2 = __webpack_require__(77);
+	
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+	
+	var _createClass2 = __webpack_require__(78);
+	
+	var _createClass3 = _interopRequireDefault(_createClass2);
+	
+	var _codemirror = __webpack_require__(83);
+	
+	__webpack_require__(87);
+	
+	__webpack_require__(88);
+	
+	__webpack_require__(89);
+	
+	__webpack_require__(90);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	__webpack_require__(91);
+	__webpack_require__(92);
+	
+	var OnlineEditor = function () {
+	    function OnlineEditor() {
+	        (0, _classCallCheck3.default)(this, OnlineEditor);
+	    }
+	
+	    (0, _createClass3.default)(OnlineEditor, [{
+	        key: 'handler',
+	        value: function handler(el, way) {
+	            el.each(function (k, v) {
+	                _codemirror.CodeMirror.fromTextArea(v, {
+	                    lineNumbers: true,
+	                    mode: way,
+	                    matchBrackets: true
+	                });
+	            });
+	        }
+	    }]);
+	    return OnlineEditor;
+	}();
+	
+	var cm = new OnlineEditor();
+	var cm_textarea = $('.cm_textarea');
+	var _script = $('.cm_textarea_script');
+	var _css = $('.cm_textarea_css');
+	var _xml = $('.cm_textarea_xml');
+	
+	cm_textarea.length > 0 && cm.handler(cm_textarea, 'text/html');
+	_script.length > 0 && cm.handler(_script, 'javascript');
+	_css.length > 0 && cm.handler(_css, 'css');
+	_xml.length > 0 && cm.handler(_xml, 'xml');
+	
+	exports.default = cm;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+
+/***/ 83:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';Object.defineProperty(exports,"__esModule",{value:true});exports.CodeMirror=undefined;var _create=__webpack_require__(84);var _create2=_interopRequireDefault(_create);var _typeof2=__webpack_require__(38);var _typeof3=_interopRequireDefault(_typeof2);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// CodeMirror, copyright (c) by Marijn Haverbeke and others
 	// Distributed under an MIT license: http://codemirror.net/LICENSE
 	// This is CodeMirror (http://codemirror.net), a code editor
 	// implemented in JavaScript on top of the browser's DOM.
@@ -1158,17 +1220,17 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 82:
+/***/ 84:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(83), __esModule: true };
+	module.exports = { "default": __webpack_require__(85), __esModule: true };
 
 /***/ },
 
-/***/ 83:
+/***/ 85:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(84);
+	__webpack_require__(86);
 	var $Object = __webpack_require__(9).Object;
 	module.exports = function create(P, D){
 	  return $Object.create(P, D);
@@ -1176,7 +1238,7 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 84:
+/***/ 86:
 /***/ function(module, exports, __webpack_require__) {
 
 	var $export = __webpack_require__(7)
@@ -1185,7 +1247,7 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 85:
+/***/ 87:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1194,7 +1256,7 @@ webpackJsonp([4],{
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
-	var _codemirror = __webpack_require__(81);
+	var _codemirror = __webpack_require__(83);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -1998,7 +2060,7 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 86:
+/***/ 88:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2007,7 +2069,7 @@ webpackJsonp([4],{
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
-	var _codemirror = __webpack_require__(81);
+	var _codemirror = __webpack_require__(83);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -2563,12 +2625,12 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 87:
+/***/ 89:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _codemirror = __webpack_require__(81);
+	var _codemirror = __webpack_require__(83);
 	
 	(function (mod) {
 	  // if (typeof exports == "object" && typeof module == "object") // CommonJS
@@ -2576,7 +2638,7 @@ webpackJsonp([4],{
 	  // else if (typeof define == "function" && define.amd) // AMD
 	  //   define(["./codemirror", "./xml", "./javascript", "./css"], mod);
 	  // else // Plain browser env
-	  mod(_codemirror.CodeMirror, __webpack_require__(88), __webpack_require__(85), __webpack_require__(86));
+	  mod(_codemirror.CodeMirror, __webpack_require__(90), __webpack_require__(87), __webpack_require__(88));
 	})(function (CodeMirror) {
 	  "use strict";
 	
@@ -2711,12 +2773,12 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 88:
+/***/ 90:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _codemirror = __webpack_require__(81);
+	var _codemirror = __webpack_require__(83);
 	
 	(function (mod) {
 	  mod(_codemirror.CodeMirror);
@@ -3092,14 +3154,14 @@ webpackJsonp([4],{
 
 /***/ },
 
-/***/ 89:
+/***/ 91:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 90:
+/***/ 92:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
