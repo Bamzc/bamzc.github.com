@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript中的Repaint和Reflow基本认识和优化</title>
+    
+    
+    <meta name="author" content="Zhaoce Bai">
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom styles -->
+    <link href="/assets/src/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- single page styles -->
+    
+        
+            <link href="/assets/css/study_relevant.css" rel="stylesheet" type="text/css">
+        
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+  </head>
+  <body>
+    <div id="wrap">
+        <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">白召策的博客</a>
+        </div>
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+                
+                
+
+
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/main/">网站首页</a>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/topics/life">生活点滴</a>
+            
+              <ul class="dropdown-menu bounceOutDown animated">
+              
+              <li><a title="" target="_self" href="/topics/a">生活琐事</a></li>
+              
+              <li><a title="" target="_self" href="/topics/b">生活随笔</a></li>
+              
+              <li><a title="" target="_self" href="/topics/c">杂乱文档</a></li>
+              
+              <li><a title="" target="_self" href="/topics/d">文章存档</a></li>
+              
+              </ul>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/about/">关于白召策</a>
+            
+              <ul class="dropdown-menu bounceOutDown animated">
+              
+              <li><a title="" target="_self" href="/topics/a">阅读列表</a></li>
+              
+              <li><a title="" target="_self" href="/topics/b">设计草图</a></li>
+              
+              <li><a title="" target="_self" href="/topics/c">学习总结</a></li>
+              
+              <li><a title="" target="_self" href="/topics/mywork">我的作品</a></li>
+              
+              </ul>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/topics/study">学习点滴</a>
+            
+              <ul class="dropdown-menu bounceOutDown animated">
+              
+              <li><a title="" target="_self" href="/topics/webacc">前端积累</a></li>
+              
+              <li><a title="" target="_self" href="/topics/webcolle">资料收集</a></li>
+              
+              </ul>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <!--
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="站内搜索">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            -->
+        </div>
+      </nav>
+    <div class="container">
+        
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"bamzc"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+<!-- 多说公共JS代码 end -->
+<div class="page-header">
+  <h1>
+     <small>JavaScript中的Repaint和Reflow基本认识和优化</small>
+    
+  </h1>
+</div>
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-12 post-container post-container-category">
+            <h3>1. 什么是Repaint/Reflow?</h3>
+<p>先来一张图：浏览器解析大概的工作流程</p>
+<pre><img src="/assets/src/img/repaint_reflow.png" alt="浏览器解析大概的工作流程" /></pre>
+<p>这张图应该可以很好理解，归纳为四个步骤：</p>
+<ul>
+<li>1、解析HTML以构建DOM树：渲染引擎开始解析HTML文档，转换树中的html标签或js生成的标签到DOM节点，它被称为 -- 内容树。</li>
+<li>2、构建渲染树：解析CSS（包括外部CSS文件和样式元素以及js生成的样式），根据CSS选择器计算出节点的样式，创建另一个树 —- 渲染树。</li>
+<li>3、布局渲染树:从根节点递归调用，计算每一个元素的大小、位置等，给每个节点所应该出现在屏幕上的精确坐标。</li>
+<li>4、绘制渲染树: 遍历渲染树，每个节点将使用UI后端层来绘制。</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+<!-- 多说评论框 start -->
+<a href='#' id="comments"></a>
+<div class="ds-thread" id="ds-thread" data-limit='100' data-thread-key="/study/2016/11/12/repaint-reflow" data-url="/study/2016/11/12/repaint-reflow.html"></div>
+<!-- 多说评论框 end -->
+
+
+
+    </div>
+        <div class="footer">
+            <div class="footer-container">
+                <p>&copy; 2016 Zhaoce Bai
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <script src="/assets/js/common.js"></script>
+    
+        
+            <script src="/assets/js/study_relevant.js"></script>
+        
+    
+  </body>
+</html>
+
