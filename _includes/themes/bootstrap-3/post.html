@@ -17,13 +17,13 @@
                     {% endif %}
                 {% else %}
                     {% if paginator.previous_page == 1 and paginator.total_pages > 2%} 
-                         <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}">上一页</a>
+                         <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}/">上一页</a>
                         <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}/page/{{ paginator.next_page }}">下一页</a>
                     {% elsif paginator.page != paginator.total_pages %}
                         <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}/page/{{ paginator.previous_page }}">上一页</a>
                         <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}/page/{{ paginator.next_page }}">下一页</a>
                     {% elsif paginator.total_pages == 2 %}
-                        <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}">上一页</a>
+                        <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}/">上一页</a>
                     {% else %}
                         <a class="more-link btn btn-primary btn-xs" href="{{ BASE_PATH }}/topics/{{page.category}}/page/{{ paginator.previous_page }}">上一页</a>
                     {% endif %}
