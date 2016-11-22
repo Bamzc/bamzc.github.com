@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>dom加载ready方法实现</title>
+    
+    
+    <meta name="author" content="Zhaoce Bai">
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom styles -->
+    <link href="/assets/src/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- single page styles -->
+    
+        
+            <link href="/assets/css/study_relevant.css" rel="stylesheet" type="text/css">
+        
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+  </head>
+  <body>
+    <div id="wrap">
+        <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">白召策的博客</a>
+        </div>
+        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+                
+                
+
+
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/main/">网站首页</a>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/life/">生活点滴</a>
+            
+              <ul class="dropdown-menu bounceOutDown animated">
+              
+              <li><a title="" target="_self" href="/topics/a">生活琐事</a></li>
+              
+              <li><a title="" target="_self" href="/topics/b">生活随笔</a></li>
+              
+              <li><a title="" target="_self" href="/topics/c">杂乱文档</a></li>
+              
+              <li><a title="" target="_self" href="/topics/d">文章存档</a></li>
+              
+              </ul>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/about/">关于白召策</a>
+            
+              <ul class="dropdown-menu bounceOutDown animated">
+              
+              <li><a title="" target="_self" href="/topics/a">阅读列表</a></li>
+              
+              <li><a title="" target="_self" href="/topics/b">设计草图</a></li>
+              
+              <li><a title="" target="_self" href="/topics/c">学习总结</a></li>
+              
+              <li><a title="" target="_self" href="/topics/mywork">我的作品</a></li>
+              
+              </ul>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+      	
+      	  <li class="menu-item"><a href="/study/">学习点滴</a>
+            
+              <ul class="dropdown-menu bounceOutDown animated">
+              
+              <li><a title="" target="_self" href="/topics/webacc">前端积累</a></li>
+              
+              <li><a title="" target="_self" href="/topics/webcolle">资料收集</a></li>
+              
+              </ul>
+            
+          </li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <!--
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="站内搜索">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            -->
+        </div>
+      </nav>
+    <div class="container">
+        
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"bamzc"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+<!-- 多说公共JS代码 end -->
+<div class="page-header">
+  <h1>
+     <small>dom加载ready方法实现</small>
+    
+  </h1>
+</div>
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-12 post-container post-container-category">
+            <pre>
+<textarea class="cm_textarea_script">
+    
+var ready = (function(){
+
+    var DOMContentLoaded,_fn,isReady = false;
+
+    function doScrollCheck() {
+
+        try {
+            // 如果是IE低版本的话，可以使用 Diego Perini的这个技巧
+            // http://javascript.nwbox.com/IEContentLoaded/
+            document.documentElement.doScroll("left");
+        } catch(e) {
+            setTimeout( doScrollCheck, 1 );
+            return;
+        }
+
+        handle();
+    }
+    //firefox，chorme，safari，等等除基于IE内核以外的高级浏览器的添加事件方式
+    //DOM2的用法
+    if ( document.addEventListener ) {
+        DOMContentLoaded = function() {
+            document.removeEventListener( "DOMContentLoaded", DOMContentLoaded, false );
+            handle();
+        };
+    //IE处理事件的方式
+    } else if ( document.attachEvent ) {
+        DOMContentLoaded = function() {
+            // 确保body存在，IE的处理方式
+            if ( document.readyState === "complete" ) {
+                document.detachEvent( "onreadystatechange", DOMContentLoaded );
+                handle();
+            }
+        };
+    }
+    function handle(){
+        if ( isReady ) {
+            return;
+        }
+
+        _fn();
+
+        isReady = true;
+
+        _fn = null;
+    }
+    var loadRead = function(fn){
+
+        if(isReady){
+            fn.call(document);
+            return;
+        }
+
+        _fn = fn;
+
+        if ( document.readyState === "complete" ) {
+            return setTimeout( handle, 1 );
+        }
+        //IE9+，firefox，chorme，safari，opera添加事件方式
+        //DOM2级事件处理程序
+        if ( document.addEventListener ) {
+            document.addEventListener( "DOMContentLoaded", DOMContentLoaded, false );
+            window.addEventListener( "load", handle, false );
+        //IE事件处理程序
+        } else if ( document.attachEvent ) {
+            document.attachEvent( "onreadystatechange", DOMContentLoaded );
+            window.attachEvent( "onload", handle );
+            // 如果IE不支持onreadystatechange，可以使用以下方式触发
+            // 检测document是否ready
+            var toplevel = false;
+
+            try {
+                toplevel = window.frameElement == null;
+            } catch(e) {}
+
+            if ( document.documentElement.doScroll &amp;&amp; toplevel ) {
+                doScrollCheck();
+            }
+        }
+
+    };
+    return loadRead;
+})();
+
+ready(function(){
+    console.log('loaded')
+});
+
+</textarea>
+</pre>
+<div>
+<h3>DOM文档加载的步骤</h3>
+<ul>
+    <li>(1) 解析HTML结构。</li>
+    <li>(2) 加载外部脚本和样式表文件。</li>
+    <li>(3) 解析并执行脚本代码。</li>
+    <li>(4) 构造HTML DOM模型。//ready</li>
+    <li>(5) 加载图片等外部文件。</li>
+    <li>(6) 页面加载完毕。//load</li>
+</ul>
+<p>由于该事件在文档就绪后发生，因此把所有其他的事件和函数置于该事件中是非常好的做法。由此可见，ready事件的执行顺序是要优于load事件的。</p>
+<p><strong>load:</strong>当页面完全加载在window上面后触发，当所有框架都加载完毕是在框架集上面触发，当图像加载完毕是在img元素上面触发，或者当嵌入的内容加载完毕时在Object元素上面触发。</p>
+</div>
+<h3>HTML DOM readyState 属性</h3>
+<div>
+    <p>readyState 属性返回当前文档的状态（载入中……）。该属性返回以下值:</p>
+    <ul>
+        <li>(1) uninitialized - 还未开始载入</li>
+        <li>(2) loading - 载入中</li>
+        <li>(3) interactive - 已加载，文档与用户可以开始交互</li>
+        <li>(4) complete - 载入完成</li>
+    </ul>
+<div>
+</div></div>
+
+        </div>
+    </div>
+</div>
+<!-- 多说评论框 start -->
+<a href='#' id="comments"></a>
+<div class="ds-thread" id="ds-thread" data-limit='100' data-thread-key="/webacc/2016/11/03/ready-document" data-url="/webacc/2016/11/03/ready-document.html"></div>
+<!-- 多说评论框 end -->
+
+
+
+    </div>
+        <div class="footer">
+            <div class="footer-container">
+                <p>&copy; 2016 Zhaoce Bai
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <script src="/assets/js/common.js"></script>
+    
+        
+            <script src="/assets/js/study_relevant.js"></script>
+        
+    
+  </body>
+</html>
+
