@@ -1183,8 +1183,9 @@ h3, h4{
   font-weight: 700;
   text-indent: 2em;
 }
-.post-container .note-warning .content{
+.post-container .note-warning .warn-text{
   margin-left: 35px;
+  font-size: 16px;
 }
 .post-container .note-warning:before{
   content: "‼";

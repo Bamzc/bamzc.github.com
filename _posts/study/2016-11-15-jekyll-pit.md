@@ -1,10 +1,10 @@
 ---
 layout: study
-title : 我的jekyll之旅，遇到的坑
+title : jekyll，遇到的坑
 tags: ['jekyll','blog']
 categorys: ['网站','博客']
 header: jekyll
-tagline: 我的jekyll之旅，遇到的坑
+tagline: jekyll，遇到的坑
 date: 2016-11-15 19:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']

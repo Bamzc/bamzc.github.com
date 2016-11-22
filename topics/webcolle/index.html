@@ -1,13 +1,12 @@
 ---
-layout: page
+layout: post
 title: 资料收集
 header: 资料收集
 tagline: 分类列表：资料收集
 message: 天才，就其本质而说，只不过是一种对事业、对工作过盛的热爱而已。
 category: webcolle
 loadJs: ['study_relevant']
-permalink: /webcolle/
 ---
 {% include JB/setup %}
-{% assign posts_collate = site.categorys %}
-{% include JB/posts_collate %}
+{% assign posts_paginator = paginator.posts %}
+{% include JB/posts_paginator %}

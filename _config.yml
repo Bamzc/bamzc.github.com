@@ -7,7 +7,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-
   # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title.html
@@ -39,11 +38,13 @@ production_url : https://bamzc.github.io
 #production_url : http://localhost:4000
 
 baseurl : /
+#baseurl : https://bamzc.github.io
 host : localhost
 port : 4000
 
-page_num : 5
-
+paginate: 4
+#paginate_path: ['topics/study/page/:num','topics/life/page/:num']
+paginatepath: ['topics/study/page/:num','topics/life/page/:num','topics/webacc/page/:num','topics/webcolle/page/:num']
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
