@@ -1222,20 +1222,25 @@ h3, h4{
 .post-container .meta-box .tag-links a,b {
     margin-right: 5px;
 }
-.fa {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-feature-settings: normal;
-    font-kerning: auto;
-    font-language-override: normal;
-    font-size: inherit;
-    font-size-adjust: none;
-    font-stretch: normal;
-    font-style: normal;
-    font-synthesis: weight style;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1;
-    text-rendering: auto;
+.post-container .float-right{
+    float: right;
+}
+.post-container .float-right p{
+  color: #999;
+  font-size: 16px;
+    line-height: 1.5;
+}
+.post-container .float-right ul > li{
+  float: left;
+  margin: 10px;
+}
+.post-container .float-right .head-img{
+  background: url(/assets/src/dist/images/6e7926d4e4f4084dd8bbe788e2b87949.jpg) center no-repeat;
+}
+.post-container .float-left{
+  float: left;
+}
+.post-container .float-left p{
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map*/
