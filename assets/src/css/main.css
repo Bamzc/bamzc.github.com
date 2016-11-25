@@ -1123,11 +1123,15 @@ h3, h4{
     min-height: 1px;
     padding-left: 1px;
     padding-right: 1px;
+    padding-bottom: 20px;
     position: relative;
 }
 .row .post-container{
   padding-left: 4%;
   padding-right: 4%
+}
+.row .post-notborder{
+  border: 0px;
 }
 .main-content a{
   color:#dd4814;
@@ -1243,3 +1247,49 @@ h3, h4{
 .post-container .float-left p{
   font-size: 16px;
 }
+.row .post-archive{
+  border:0px;
+  position: relative;
+  padding-left: 240px;
+}
+.row .post-archive::before { 
+  content: "";
+  width: 1px; 
+  height: 100%; 
+  top: 0; 
+  bottom: 0; 
+  left: 230px; 
+  background: #ccc; 
+  position: absolute 
+}
+.post-archive ul li{
+    margin :20px;
+    position: relative;
+}
+.archive-cricle{
+  position: relative;
+}
+.row .post-archive .archive-cricle::after { 
+  content: ""; 
+  width: 11px; 
+  height: 11px; 
+  border-radius: 50%; 
+  position: absolute; 
+  left: -15px; 
+  top: 13px; 
+  background: #dd4814; 
+  border: 2px solid #dd4814; 
+  z-index: 10; }
+.post-archive .archive-link::after { 
+  content: ""; 
+  width: 9px; 
+  height: 9px; 
+  border-radius: 50%; 
+  position: absolute; 
+  left: -59px; 
+  top: 9px; 
+  background: #dd4814; 
+  border: 2px solid #dd4814; 
+  opacity: 0.7;
+  z-index: 10; }
+  .post-archive .archive-link:hover::after {opacity: 1;}
