@@ -1293,3 +1293,144 @@ h3, h4{
   opacity: 0.7;
   z-index: 10; }
   .post-archive .archive-link:hover::after {opacity: 1;}
+    .row .post-container-readlist .read-wrapper{
+    position: relative;
+    margin: 0 4%;
+  }
+  .read-list{
+    float: left;
+    text-align: center;
+    background: #fafafa;
+    position: relative;
+    width: 240px;
+    margin: 10px;
+    padding: 20px;
+    /**向 div 元素添加圆角边框：*/
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    /**规定背景的绘制区域：padding-box 背景被裁剪到内边距框。*/
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border-radius: 7px;
+      border-radius: 7px;
+      /*
+       *可通过将 box-sizing 设置为 "border-*box"。这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。
+       */
+      -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /**盒子阴影效果*/
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+      color: 0 1px 8px rgba(0, 0, 0, 0.4);
+      /**盒子阴影进行线性变换*/
+    -webkit-transition: -webkit-box-shadow .25s linear;
+    -moz-transition: -moz-box-shadow .25s linear;
+    -o-transition: box-shadow .25s linear;
+    -ms-transition: box-shadow .25s linear;
+    transition: box-shadow .25s linear;
+  }
+  .read-list:hover {
+    -webkit-box-shadow: 0 0 8px #333;
+    -moz-box-shadow: 0 0 8px #333;
+    box-shadow: 0 0 8px #333;
+    color: 0 0 8px #333;
+    z-index: 5;
+  }
+  .read-list .btn:hover,.read-list .btn:visited,.read-list .btn:active,.read-list .btn:link{
+    color: #dd4814;
+  }
+  .read-list .read-list-title {
+    position: relative;
+    margin: -20px -10px 20px;
+    padding: 20px;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #595f6b;
+    border-bottom: 1px dashed #d2d2d2;
+  }
+  .read-list .read-list-pic {
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding: 0;
+    line-height: 2;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    list-style-type: none;
+  }
+  .read-list .read-list-pic img{
+    width: 200px;
+    height: 200px;
+  }
+  .read-list .read-list-pic li strong {
+    font-weight: bold;
+    color: #888;
+  }
+  .ribbon-wrapper{
+    width: 70px;
+    height: 88px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .pic-ribbon{
+    font: bold 15px Sans-Serif;
+    text-align: center;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+    position: relative;
+    padding: 7px 0;
+    left: -12px;
+    top: 5px;
+    width: 120px;
+    background-color: #FFF;
+    color: #6a6340;
+    webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    color: 0px 0px 3px rgba(0,0,0,0.3);
+  }
+  .ribbon-red{
+    background-color: #FF7373;
+  }
+  .ribbon-green {
+      background-color: #BFDC7A;
+  }
+  .ribbon-blue {
+      background-color: #5ACBFF;
+  }
+  .ribbon-orange {
+      background-color: #FF9542;
+  }
+  .read-list .read-list-feature {
+    margin-bottom: 0px;
+    margin-left: 0;
+    padding: 0;
+    line-height: 2;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    list-style-type: none;
+  }
+  @media (min-width: 768px) {
+    .read-list {
+    width: 23%;
+    padding: 20px;
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 0;
+    background-clip: padding-box;
+    }
+  }
