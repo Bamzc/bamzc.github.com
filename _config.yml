@@ -40,7 +40,7 @@ production_url : https://bamzc.github.io
 baseurl : /
 #baseurl : https://bamzc.github.io
 host : localhost
-port : 80
+port : 4000
 
 paginate: 4
 #paginate_path: ['topics/study/page/:num','topics/life/page/:num']
