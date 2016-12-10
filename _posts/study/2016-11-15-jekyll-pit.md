@@ -2,13 +2,13 @@
 layout: study
 title : jekyll，遇到的坑
 tags: ['jekyll','blog']
-categorys: ['网站','博客']
+categories: ['网站','博客']
 header: jekyll
 tagline: jekyll，遇到的坑
 date: 2016-11-15 19:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: study
+ascription: study
 brief: 挖坑，跳坑，填坑，无限循环中——学习，学习，学习！
 group: navigation
 ---

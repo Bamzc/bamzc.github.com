@@ -49,7 +49,7 @@ module Jekyll
         len = paginate_array.length-1
         name = site.config['paginate_path'].split('/')[len-2]
         if name != nil
-          all_posts = all_posts.find_all { |p| p['category'] == name }
+          all_posts = all_posts.find_all { |p| p['ascription'] == name }
         else
           all_posts = all_posts.reject { |p| p['hidden'] }
         end

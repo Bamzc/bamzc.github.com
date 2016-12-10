@@ -2,13 +2,13 @@
 layout: study
 title: 前端资源教程
 tags: ['资源','教程']
-categorys: ['web','前端']
+categories: ['web','前端']
 header: resource_colle
 tagline: 前端资源教程
 date: 2016-11-06 17:21:00
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: webcolle
+ascription: webcolle
 brief: 前端资源合集， 前端资源教程。
 group: navigation
 ---

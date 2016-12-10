@@ -2,13 +2,13 @@
 layout: study
 title: 对Storage和cookie的封装
 tags: ['storage','cookie']
-categorys: ['web','存储']
+categories: ['web','存储']
 header: storage_cookie
 tagline: 对Storage和cookie的封装
 date: 2016-11-04 17:21:00
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: webacc
+ascription: webacc
 brief: 对webstorage和coolie进行了封装，可以进行增删改查操作，并且兼容各个版本的浏览器。
 group: navigation
 ---

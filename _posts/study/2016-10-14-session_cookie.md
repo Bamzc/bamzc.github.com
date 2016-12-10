@@ -2,13 +2,13 @@
 layout: study
 title : session与cookie
 tags: ['session','cookie']
-categorys: ['软件','网络通信']
+categories: ['软件','网络通信']
 header: session与cookie
 tagline: session与cookie
 date: 2016-10-14 20:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: study
+ascription: study
 brief: Session:在计算机中，尤其是在网络应用中，称为“会话控制”。Session 对象存储特定用户会话所需的属性及配置信息。Cookie，有时也用其复数形式 Cookies，指某些网站为了辨别用户身份、进行 session 跟踪而储存在用户本地终端上的数据（通常经过加密）。定义于 RFC2109 和 2965 中的都已废弃，最新取代的规范是 RFC6265  。（可以叫做浏览器缓存）
 group: navigation
 ---

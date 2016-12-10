@@ -1,10 +1,12 @@
 ---
 layout: page
-title: 我的作品
-header: 我的作品
-tagline: 分类列表：我的作品
+title: tags
+header: 分类
+tagline: 分类列表：分类
 message: 天才，就其本质而说，只不过是一种对事业、对工作过盛的热爱而已。
-ascription: mywork
+ascription: categories
 loadJs: ['study_relevant']
 ---
 {% include JB/setup %}
+{% assign categories_list = site.categories %}  
+{% include JB/posts_category%}

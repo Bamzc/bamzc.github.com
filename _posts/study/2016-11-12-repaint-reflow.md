@@ -2,13 +2,13 @@
 layout: study
 title : JavaScript中的Repaint和Reflow基本认识和优化
 tags: ['repaint','reflow']
-categorys: ['web','javascript']
+categories: ['web','javascript']
 header: jekyll
 tagline: JavaScript中的Repaint和Reflow基本认识和优化
 date: 2016-11-12 19:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: study
+ascription: study
 brief: 对于DOM结构中的各个元素都有自己的盒子（模型），这些都需要浏览器根据各种样式（浏览器的、开发人员定义的等）来计算并根据计算结果将元素放到它该出现的位置，这个过程称之为reflow；当各种盒子的位置、大小以及其他属性，例如颜色、字体大小等都确定下来后，浏览器于是便把这些元素都按照各自的特性绘制了一遍，于是页面的内容出现了，这个过程称之为repaint。
 group: navigation
 ---

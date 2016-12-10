@@ -2,13 +2,13 @@
 layout: study
 title : jekyll，分页功能，附带分类分页！
 tags: ['jekyll','blog']
-categorys: ['网站','博客']
+categories: ['网站','博客']
 header: jekyll
 tagline: jekyll，分页功能，附带分类分页！
 date: 2016-11-02 19:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: study
+ascription: study
 brief: 对于大多数网站（尤其是博客），当文章越来越多的时候，就会有分页显示文章列表的需求。Jekyll 已经自建分页功能，你只需要根据约定放置文件即可。jekyll的分页总的来说还算给力，基本的功能可以完成。但是有一些缺陷，就是category，tag的分类分页无法实现，必须通过插件的方式来做。
 group: navigation
 ---

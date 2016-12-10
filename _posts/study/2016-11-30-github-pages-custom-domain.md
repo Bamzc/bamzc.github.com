@@ -2,13 +2,13 @@
 layout: study
 title : GitHub Pages 绑定来自阿里云的域名
 tags: ['Github Pages','Custom domain']
-categorys: ['网站','域名']
+categories: ['网站','域名']
 header: jekyll
 tagline: GitHub Pages 绑定来自阿里云的域名
 date: 2016-11-29 15:20:21
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: study
+ascription: study
 brief: 我在阿里云上注册了一个新域名：bamzc.top，我已经在GitHub Pages上建立了自己的博客：https://bamzc.github.io/。现在我希望将bamzc.top映射到https://bamzc.github.io/。
 group: navigation
 ---

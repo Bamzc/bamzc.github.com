@@ -1,7 +1,28 @@
-{% for post in posts_paginator %}
-    {% if post.ascription == page.ascription %}
+{% comment %}<!--
+Collate_posts helper. Collated posts by year and month.
+Usage:
+  1) assign the 'posts_collate' variable to a valid array of posts.
+  2) include JB/posts_collate
+  example:
+    {% assign posts_collate = site.posts %}
+    {% include JB/posts_collate %}
+
+  Ordering:
+    Posts are displayed in reverse chronological order.
+    For normal chronological order:
+      1) Change the for loop to this:
+        => 'for post in site.posts reversed'
+      2) Next make sure to change 'post.previous.date' to:
+        => 'post.next.date'
+        
+-->{% endcomment %}
+{% if site.JB.posts_collate.provider == "custom" %}
+  {% include custom/posts_collate %}
+{% else %}
+{% for category in site.categories %}
+  {% for post in category.last  %}
           <div class="row">
-            <div class="col-md-12 post-container post-container-row">
+            <div class="col-md-12 post-container">
             <h2 class="post-title">
             <a rel="bookmark" href="{{post.id}}#{{post.date | date: "%H%M"}}">{{post.title}}</a>
             </h2>
@@ -32,6 +53,7 @@
           </div>
           </div>
           </div>
-    {% endif %}
+  {% endfor %}
 {% endfor %}
+{% endif %}
 {% assign posts_collate = nil %}

@@ -17,15 +17,17 @@ var duoshuoQuery = {short_name:"bamzc"};
     {% if page.message %} <p>{{ page.message }}</p>{% endif %}
   </h1>
 </div>
-<div class="main-content">
+<div class="content-center">
     <div class="row">
         <div class="col-md-12 post-container post-container-category">
             {{content}}
         </div>
+        <div class="duoshuo">
+            <!-- 多说评论框 start -->
+            <a href='#' id="comments"></a>
+            <div class="ds-thread" id="ds-thread" data-limit='100' data-thread-key="{{page.id}}" data-url="{{page.url}}"></div>
+            <!-- 多说评论框 end -->
+        </div>
     </div>
-    <!-- 多说评论框 start -->
-    <a href='#' id="comments"></a>
-    <div class="ds-thread" id="ds-thread" data-limit='100' data-thread-key="{{page.id}}" data-url="{{page.url}}"></div>
-    <!-- 多说评论框 end -->
 </div>
 

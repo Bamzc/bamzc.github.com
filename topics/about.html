@@ -6,49 +6,75 @@ tagline: 每个阶段，都把他当做从零开始
 message: 业精于勤荒于嬉，行成于思毁于随
 group: navigation
 index: 3
-menu_list: {'readlist':'阅读列表','b':'设计草图','c':'学习总结','mywork':'我的作品'}
+menu_list: {'readlist':'阅读列表','psd':'设计草图','c':'学习总结','mywork':'我的作品'}
 loadJs: ['about_me']
 permalink: /about/
 ---
 {% include JB/setup %}
-<div class="row">
-		<div class="col-md-12 post-container ">
-			<div class="float-left">
-				<p>不知名，前端工程师一枚，相比其他工程师强大的背景经历，我的就显得有些简陋了。</p>
-				<p>有一颗追求强者的心，才会有机会成为真正的强者。而我，也一直在坚持不懈的向前奔跑。</p>
-				<p>顽固的完美主义者、音乐重度依赖患者</p>
-			</div>
-			<div class="float-right">
-				<img src="../assets/src/img/bamzc.jpg" alt=""/>
-				<p>总有学习不完的东西，等着你去挖掘。<br/>
-				<p>总有遗漏的地方，等着你去发现。</p>
-				<p>每个阶段，都把他当做从零开始。</p>
-				<ul>
-					<li><a target="_blank" href="https://segmentfault.com/u/bamzcu">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-stack-1x fa-inverse">sf</i>
-						</span></a>
-					</li>
-					<li><a target="_blank" href="http://weibo.com/u/3948447574">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-						</span></a>
-					</li>
-					<li><a href="tencent://message/?uin=75989993&Site=&Menu=yes">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-qq fa-stack-1x fa-inverse"></i>
-						</span></a>
-					</li>
-					<li><a target="_blank" href="https://github.com/bamzc">
-						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-github fa-stack-1x fa-inverse"></i>
-						</span></a>
-					</li>
-				</ul>
-			</div>
-		</div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"bamzc"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+<!-- 多说公共JS代码 end -->
+<div class="left-column">
+	<div class="brief-introduction">
+		<p>不知名，前端工程师一枚，相比其他工程师强大的背景经历，我的就显得有些简陋了。</p>
+		<p>	有一颗追求强者的心，才会有机会成为真正的强者。而我，也一直在坚持不懈的向前奔跑。</p>
+		<p>	顽固的完美主义者、音乐重度依赖患者</p>
+	</div>
+    <div class="duoshuo">
+        <!-- 多说评论框 start -->
+        <a href='#' id="comments"></a>
+        <div class="ds-thread" id="ds-thread" data-limit='100' data-thread-key="{{page.id}}" data-url="{{page.url}}"></div>
+        <!-- 多说评论框 end -->
+    </div>
 </div>
+<div class="right-column">
+    <div class="head-portrait">
+        <img src="../assets/src/img/bamzc.jpg" alt=""/>
+        <p>男 90后 处女座 前端工程师</p>
+        <ul>
+            <li><a target="_blank" href="https://segmentfault.com/u/bamzcu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-1x fa-inverse">sf</i>
+                </span></a>
+            </li>
+            <li><a target="_blank" href="http://weibo.com/u/3948447574">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span></a>
+            </li>
+            <li><a href="tencent://message/?uin=75989993&Site=&Menu=yes">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
+                </span></a>
+            </li>
+            <li><a target="_blank" href="https://github.com/bamzc">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <h3 class="title">小白语录</h3>
+        <ul class="list">
+            <li>总有学习不完的东西，等着你去挖掘。</li>
+            <li>总有遗漏的地方，等着你去发现。</li>
+            <li>每个阶段，都把他当做从零开始。</li>
+        </ul>
+    </div>
+</div>
+<div style="clear:both"></div>

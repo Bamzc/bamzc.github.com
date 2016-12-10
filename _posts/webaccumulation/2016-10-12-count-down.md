@@ -2,13 +2,13 @@
 layout: study
 title: 倒计时
 tags: ['js','date']
-categorys: ['网站','倒计时']
+categories: ['网站','倒计时']
 header: count_down
 tagline: 倒计时实现
 date: 2016-10-12 10:21:00
 loadCss: ['study_relevant']
 loadJs: ['study_relevant']
-category: webacc
+ascription: webacc
 brief: 倒计时。
 group: navigation
 ---

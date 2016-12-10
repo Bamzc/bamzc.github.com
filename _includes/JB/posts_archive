@@ -24,8 +24,8 @@ Usage:
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
     {% if forloop.first %}
-      <div class="row">
-      <div class="col-md-12 post-container post-archive">
+      
+      <div class="post-archive">
       <h2 class="archive-cricle">{{this_year}}</h2>
       <ul>
     {% endif %}
@@ -33,7 +33,7 @@ Usage:
   
     {% if forloop.last %}
       </ul>
-      </div></div>
+      </div>
     {% else %}
       {% if this_year != next_year %}
         </ul>
