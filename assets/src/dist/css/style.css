@@ -761,15 +761,16 @@ a:hover {
 --------------------------------------------------------------------------*/
 
 .picAanimation-wrapper {
-    float: left;
-    margin-right: 10px;
+    width: 1200px;
+    margin:0 auto;
 }
 
 .pic-info-animation {
-    width: 372px;
+    width: 280px;
+    float: left;
     position: relative;
+    margin:10px;
     background: #fff;
-    margin-bottom: 20px;
     border: 8px solid #fff;
     -wekit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -796,6 +797,7 @@ a:hover {
 
 .pic-info-animation .pic-info-imgae img {
     max-width: 100%;
+    height: 300px;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
     -o-transition: all .25s ease;
