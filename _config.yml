@@ -13,7 +13,9 @@ permalink: /:year/:month/:day/:title.html
 
 exclude: ["node_modules",".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
-timezone: TIMEZONE
+
+twitter_username: jekyllrb
+github_username:  jekyll
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
