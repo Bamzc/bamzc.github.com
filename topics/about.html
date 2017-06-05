@@ -11,19 +11,7 @@ loadJs: ['about_me']
 permalink: /about/
 ---
 {% include JB/setup %}
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"bamzc"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
-<!-- 多说公共JS代码 end -->
+
 <div class="left-column">
 	<div class="brief-introduction">
 		<p>不知名，前端工程师一枚，相比其他工程师强大的背景经历，我的就显得有些简陋了。</p>
@@ -31,10 +19,24 @@ var duoshuoQuery = {short_name:"bamzc"};
 		<p>	顽固的完美主义者、音乐重度依赖患者</p>
 	</div>
     <div class="duoshuo">
-        <!-- 多说评论框 start -->
-        <a href='#' id="comments"></a>
-        <div class="ds-thread" id="ds-thread" data-limit='100' data-thread-key="{{page.id}}" data-url="{{page.url}}"></div>
-        <!-- 多说评论框 end -->
+        <!--评论系统-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+        <script>
+            var cloudTieConfig = {
+                url: document.location.href, 
+                sourceId: "",
+                productKey: "6bf7727383c54f13be32e914b61fe177",
+                target: "cloud-tie-wrapper"
+            };
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] 
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
     </div>
 </div>
 <div class="right-column">

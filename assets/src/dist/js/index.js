@@ -1,7 +1,7 @@
 webpackJsonp([1],{
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 	
@@ -61,10 +61,10 @@ webpackJsonp([1],{
 	})();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-/***/ },
+/***/ }),
 
 /***/ 75:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(jQuery) {"use strict";
 	
@@ -303,32 +303,27 @@ webpackJsonp([1],{
 							}, 50);
 						}
 					} else {
-						var u, a, f;
+						var o = function o() {
+							i._setHashTag();i.active = !1;i._resetAutoPlay(!0, i.settings.autoPlayDelay);
+						};
 	
-						(function () {
-							var o = function o() {
-								i._setHashTag();i.active = !1;i._resetAutoPlay(!0, i.settings.autoPlayDelay);
-							};
-	
-							switch (i.settings.fallback.theme) {case "fade":
-									i.frames.css({ position: "relative" });i.beforeCurrentFrameAnimatesOut();i.currentFrame = i.frames.eq(i.currentFrameID - 1);i.currentFrame.animate({ opacity: 0 }, i.settings.fallback.speed, function () {
-										i.currentFrame.css({ display: "none", "z-index": "1" });i.afterCurrentFrameAnimatesOut();i.beforeNextFrameAnimatesIn();i.nextFrame.css({ display: "block", "z-index": i.numberOfFrames }).animate({ opacity: 1 }, 500, function () {
-											i.afterNextFrameAnimatesIn();
-										});o();
-									});i.frames.css({ position: "relative" });break;case "slide":default:
-									u = {};
-									a = {};
-									f = {};
-									if (i.direction === 1) {
-										u.left = "-100%";a.left = "100%";
-									} else {
-										u.left = "100%";a.left = "-100%";
-									}f.left = "0";f.opacity = 1;i.currentFrame = i.frames.eq(i.currentFrameID - 1);i.beforeCurrentFrameAnimatesOut();i.currentFrame.animate(u, i.settings.fallback.speed, function () {
-										i.currentFrame.css({ display: "none", "z-index": "1" });i.afterCurrentFrameAnimatesOut();
-									});i.beforeNextFrameAnimatesIn();i.nextFrame.show().css(a);i.nextFrame.css({ display: "block", "z-index": i.numberOfFrames }).animate(f, i.settings.fallback.speed, function () {
-										o();i.afterNextFrameAnimatesIn();
-									});}
-						})();
+						switch (i.settings.fallback.theme) {case "fade":
+								i.frames.css({ position: "relative" });i.beforeCurrentFrameAnimatesOut();i.currentFrame = i.frames.eq(i.currentFrameID - 1);i.currentFrame.animate({ opacity: 0 }, i.settings.fallback.speed, function () {
+									i.currentFrame.css({ display: "none", "z-index": "1" });i.afterCurrentFrameAnimatesOut();i.beforeNextFrameAnimatesIn();i.nextFrame.css({ display: "block", "z-index": i.numberOfFrames }).animate({ opacity: 1 }, 500, function () {
+										i.afterNextFrameAnimatesIn();
+									});o();
+								});i.frames.css({ position: "relative" });break;case "slide":default:
+								var u = {},
+								    a = {},
+								    f = {};if (i.direction === 1) {
+									u.left = "-100%";a.left = "100%";
+								} else {
+									u.left = "100%";a.left = "-100%";
+								}f.left = "0";f.opacity = 1;i.currentFrame = i.frames.eq(i.currentFrameID - 1);i.beforeCurrentFrameAnimatesOut();i.currentFrame.animate(u, i.settings.fallback.speed, function () {
+									i.currentFrame.css({ display: "none", "z-index": "1" });i.afterCurrentFrameAnimatesOut();
+								});i.beforeNextFrameAnimatesIn();i.nextFrame.show().css(a);i.nextFrame.css({ display: "block", "z-index": i.numberOfFrames }).animate(f, i.settings.fallback.speed, function () {
+									o();i.afterNextFrameAnimatesIn();
+								});}
 					}i.currentFrameID = t;
 				}
 			}, destroy: function destroy(t) {
@@ -492,7 +487,7 @@ webpackJsonp([1],{
 	})(jQuery);
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=index.js.map

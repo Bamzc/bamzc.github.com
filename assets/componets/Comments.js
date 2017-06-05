@@ -1,6 +1,6 @@
 class Comments{
     ajaxHandlerComments(cb,key){
-    	$.ajax({
+    	/*$.ajax({
 			url:'https://api.duoshuo.com/threads/counts.jsonp',
 			type:'get',
 			data:{
@@ -14,7 +14,7 @@ class Comments{
 				}
 				
 			}
-		});
+		});*/
     }
 }
 
@@ -22,13 +22,13 @@ let cm = new Comments();
 
 let comments = $('.comments-link');
 
-if(comments.length > 0){
+/*if(comments.length > 0){
 	comments.each((k,v) => {
 		let comments_a = $(v).find('a');
 		cm.ajaxHandlerComments(function(res){
 			comments_a.find('i').html(res.comments);
 		},comments_a.data('thread-key'));
 	});
-}
+}*/
 
 export default cm;

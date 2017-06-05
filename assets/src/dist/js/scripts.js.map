@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///./assets/src/js/scripts.js"],"names":[],"mappings":";;;;;;AAAA,wB","file":"js/scripts.js","sourcesContent":["import '../../base/bootstrap.min'\n\n\n/** WEBPACK FOOTER **\n ** ./assets/src/js/scripts.js\n **/"],"sourceRoot":""}
+{"version":3,"sources":["webpack:///./assets/src/js/scripts.js"],"names":[],"mappings":";;;;;;AAAA,wB","file":"js/scripts.js","sourcesContent":["import '../../base/bootstrap.min'\n\n\n// WEBPACK FOOTER //\n// ./assets/src/js/scripts.js"],"sourceRoot":""}
