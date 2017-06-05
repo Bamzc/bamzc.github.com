@@ -34,4 +34,4 @@
 
 #### Analytics
 
-网站分析，现在使用的是百度统计和Google Analytics。需要去官方网站注册一下，然后将返回的code贴在下面：
+网站分析，现在使用的是百度统计和Google Analytics。需要去官方网站注册一下，然后将返回的code贴在下面。
