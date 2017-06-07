@@ -1,6 +1,6 @@
 # bamzc blog
 
-###[我的个人博客](https://bamzc.top)
+### [我的个人博客](https://bamzc.top)
 
 ![](http://bamzc.top/assets/src/img/blog2.png)
 
@@ -16,10 +16,7 @@
 
 根据jekyll官方示例，启动即可。
 
-```
-	jekyll serve
 
-```
 本地服务，http://localhost:4000
 
 
@@ -35,3 +32,6 @@
 #### Analytics
 
 网站分析，现在使用的是百度统计和Google Analytics。需要去官方网站注册一下，然后将返回的code贴在下面。
+
+## License
+(The MIT License) Copyright (c) 2016 - 2017 bamzc

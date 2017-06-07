@@ -1170,6 +1170,7 @@ a:hover {
     margin-bottom: 16px;
     font-weight: 100;
     color: #dd4814;
+    text-indent: 0;
 }
 
 .post-container {
@@ -1185,6 +1186,7 @@ ul {
 
 .post-container li {
     line-height: 2em;
+    margin-left: 30px;
 }
 
 .row .post-container-category {
@@ -1196,7 +1198,7 @@ ul {
 .post-container p {
     text-indent: 2em;
     line-height: 2;
-    margin: 5px 0;
+    margin: 5px 10px;
 }
 
 .post-container .center {
@@ -1250,6 +1252,7 @@ ul {
 
 .post-container .post-expect a {
     vertical-align: text-bottom;
+    line-height: 1.6;
 }
 
 .post-container .btn-primary {
@@ -1532,6 +1535,10 @@ b {
     width: 1200px;
     padding: 4px 0;
     margin: 20px auto;
+}
+
+.content-center h1,h2,h3,h4,h5{
+    text-indent:1.5em;
 }
 
 .content-center .left-column {
