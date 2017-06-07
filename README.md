@@ -1,6 +1,6 @@
 # bamzc blog
 
-### [我的个人博客](https://bamzc.top)
+### [我的个人博客](http://bamzc.top)
 
 ![](http://bamzc.top/assets/src/img/blog2.png)
 
