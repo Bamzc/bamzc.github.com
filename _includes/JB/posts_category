@@ -32,7 +32,7 @@ Usage:
           <span class="comments-link">
             <a title="Comment on {{post.title}}" data-thread-key="{{post.id}}" class="ds-thread-count" href="{{post.id}}#comments" target="_self">
             <!--<i class="fa fa-comments-o">0</i> 条评论</a>-->
-            </span>
+          </span>
           </div>
           <div class="post-content post-expect">
             <p>{{post.brief}}
