@@ -48,6 +48,7 @@ module Jekyll
         paginate_array = site.config['paginate_path'].split('/')
         len = paginate_array.length-1
         name = site.config['paginate_path'].split('/')[len-2]
+        print(name)
         if name != nil
           all_posts = all_posts.find_all { |p| p['ascription'] == name }
         else

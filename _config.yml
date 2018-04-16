@@ -46,7 +46,7 @@ port : 4000
 
 paginate: 4
 #paginate_path: ['topics/study/page/:num','topics/life/page/:num']
-paginatepath: ['topics/study/page/:num','topics/life/page/:num','topics/webacc/page/:num','topics/webcolle/page/:num']
+paginatepath: ['topics/study/page/:num','topics/life/page/:num','topics/webacc/page/:num','topics/webcolle/page/:num','topics/summary/page/:num']
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
