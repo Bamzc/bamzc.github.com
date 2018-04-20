@@ -56,3 +56,5 @@ var s = obj.clone();
 console.log(s)//{a:1,b:2}
 </textarea>
 </pre>
+<p>https://juejin.im/entry/584522c0a22b9d007a9f90e0</p>
+<p>https://www.jianshu.com/p/f9bcddb0e8b4</p>

@@ -7,11 +7,11 @@ webpackJsonp([4],{
 	
 	__webpack_require__(1);
 	
-	var _Codemirror = __webpack_require__(82);
+	var _Codemirror = __webpack_require__(81);
 	
 	var _Codemirror2 = _interopRequireDefault(_Codemirror);
 	
-	var _Comments = __webpack_require__(76);
+	var _Comments = __webpack_require__(75);
 	
 	var _Comments2 = _interopRequireDefault(_Comments);
 
@@ -19,7 +19,7 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 76:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -28,11 +28,11 @@ webpackJsonp([4],{
 		value: true
 	});
 	
-	var _classCallCheck2 = __webpack_require__(77);
+	var _classCallCheck2 = __webpack_require__(76);
 	
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 	
-	var _createClass2 = __webpack_require__(78);
+	var _createClass2 = __webpack_require__(77);
 	
 	var _createClass3 = _interopRequireDefault(_createClass2);
 	
@@ -84,7 +84,7 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 77:
+/***/ 76:
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -99,14 +99,14 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 78:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _defineProperty = __webpack_require__(79);
+	var _defineProperty = __webpack_require__(78);
 	
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
 	
@@ -132,34 +132,36 @@ webpackJsonp([4],{
 
 /***/ }),
 
+/***/ 78:
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(79), __esModule: true };
+
+/***/ }),
+
 /***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(80), __esModule: true };
+	__webpack_require__(80);
+	var $Object = __webpack_require__(9).Object;
+	module.exports = function defineProperty(it, key, desc) {
+	  return $Object.defineProperty(it, key, desc);
+	};
+
 
 /***/ }),
 
 /***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(81);
-	var $Object = __webpack_require__(9).Object;
-	module.exports = function defineProperty(it, key, desc){
-	  return $Object.defineProperty(it, key, desc);
-	};
+	var $export = __webpack_require__(7);
+	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+	$export($export.S + $export.F * !__webpack_require__(17), 'Object', { defineProperty: __webpack_require__(13).f });
+
 
 /***/ }),
 
 /***/ 81:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var $export = __webpack_require__(7);
-	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-	$export($export.S + $export.F * !__webpack_require__(17), 'Object', {defineProperty: __webpack_require__(13).f});
-
-/***/ }),
-
-/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -168,15 +170,17 @@ webpackJsonp([4],{
 	    value: true
 	});
 	
-	var _classCallCheck2 = __webpack_require__(77);
+	var _classCallCheck2 = __webpack_require__(76);
 	
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 	
-	var _createClass2 = __webpack_require__(78);
+	var _createClass2 = __webpack_require__(77);
 	
 	var _createClass3 = _interopRequireDefault(_createClass2);
 	
-	var _codemirror = __webpack_require__(83);
+	var _codemirror = __webpack_require__(82);
+	
+	__webpack_require__(86);
 	
 	__webpack_require__(87);
 	
@@ -184,12 +188,10 @@ webpackJsonp([4],{
 	
 	__webpack_require__(89);
 	
-	__webpack_require__(90);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	__webpack_require__(90);
 	__webpack_require__(91);
-	__webpack_require__(92);
 	
 	var OnlineEditor = function () {
 	    function OnlineEditor() {
@@ -227,7 +229,7 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 83:
+/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
@@ -237,7 +239,7 @@ webpackJsonp([4],{
 	});
 	exports.CodeMirror = undefined;
 	
-	var _create = __webpack_require__(84);
+	var _create = __webpack_require__(83);
 	
 	var _create2 = _interopRequireDefault(_create);
 	
@@ -281,9 +283,9 @@ webpackJsonp([4],{
 	  var mac_geMountainLion = /Mac OS X 1\d\D([8-9]|\d\d)\D/.test(userAgent);
 	  var phantom = /PhantomJS/.test(userAgent);
 	
-	  var ios = /AppleWebKit/.test(userAgent) && /Mobile\/\w+/.test(userAgent
+	  var ios = /AppleWebKit/.test(userAgent) && /Mobile\/\w+/.test(userAgent);
 	  // This is woefully incomplete. Suggestions for alternative methods welcome.
-	  );var mobile = ios || /Android|webOS|BlackBerry|Opera Mini|Opera Mobi|IEMobile/i.test(userAgent);
+	  var mobile = ios || /Android|webOS|BlackBerry|Opera Mini|Opera Mobi|IEMobile/i.test(userAgent);
 	  var mac = ios || /Mac/.test(platform);
 	  var chromeOS = /\bCrOS\b/.test(userAgent);
 	  var windows = /win/i.test(platform);
@@ -614,42 +616,42 @@ webpackJsonp([4],{
 	
 	    // Covers bottom-right square when both scrollbars are present.
 	    d.scrollbarFiller = elt("div", null, "CodeMirror-scrollbar-filler");
-	    d.scrollbarFiller.setAttribute("cm-not-content", "true"
+	    d.scrollbarFiller.setAttribute("cm-not-content", "true");
 	    // Covers bottom of gutter when coverGutterNextToScrollbar is on
 	    // and h scrollbar is present.
-	    );d.gutterFiller = elt("div", null, "CodeMirror-gutter-filler");
-	    d.gutterFiller.setAttribute("cm-not-content", "true"
+	    d.gutterFiller = elt("div", null, "CodeMirror-gutter-filler");
+	    d.gutterFiller.setAttribute("cm-not-content", "true");
 	    // Will contain the actual code, positioned to cover the viewport.
-	    );d.lineDiv = elt("div", null, "CodeMirror-code"
+	    d.lineDiv = elt("div", null, "CodeMirror-code");
 	    // Elements are added to these to represent selection and cursors.
-	    );d.selectionDiv = elt("div", null, null, "position: relative; z-index: 1");
-	    d.cursorDiv = elt("div", null, "CodeMirror-cursors"
+	    d.selectionDiv = elt("div", null, null, "position: relative; z-index: 1");
+	    d.cursorDiv = elt("div", null, "CodeMirror-cursors");
 	    // A visibility: hidden element used to find the size of things.
-	    );d.measure = elt("div", null, "CodeMirror-measure"
+	    d.measure = elt("div", null, "CodeMirror-measure");
 	    // When lines outside of the viewport are measured, they are drawn in this.
-	    );d.lineMeasure = elt("div", null, "CodeMirror-measure"
+	    d.lineMeasure = elt("div", null, "CodeMirror-measure");
 	    // Wraps everything that needs to exist inside the vertically-padded coordinate system
-	    );d.lineSpace = elt("div", [d.measure, d.lineMeasure, d.selectionDiv, d.cursorDiv, d.lineDiv], null, "position: relative; outline: none"
+	    d.lineSpace = elt("div", [d.measure, d.lineMeasure, d.selectionDiv, d.cursorDiv, d.lineDiv], null, "position: relative; outline: none");
 	    // Moved around its parent to cover visible view.
-	    );d.mover = elt("div", [elt("div", [d.lineSpace], "CodeMirror-lines")], null, "position: relative"
+	    d.mover = elt("div", [elt("div", [d.lineSpace], "CodeMirror-lines")], null, "position: relative");
 	    // Set to the height of the document, allowing scrolling.
-	    );d.sizer = elt("div", [d.mover], "CodeMirror-sizer");
+	    d.sizer = elt("div", [d.mover], "CodeMirror-sizer");
 	    d.sizerWidth = null;
 	    // Behavior of elts with overflow: auto and padding is
 	    // inconsistent across browsers. This is used to ensure the
 	    // scrollable area is big enough.
-	    d.heightForcer = elt("div", null, null, "position: absolute; height: " + scrollerGap + "px; width: 1px;"
+	    d.heightForcer = elt("div", null, null, "position: absolute; height: " + scrollerGap + "px; width: 1px;");
 	    // Will contain the gutters, if any.
-	    );d.gutters = elt("div", null, "CodeMirror-gutters");
+	    d.gutters = elt("div", null, "CodeMirror-gutters");
 	    d.lineGutter = null;
 	    // Actual scrollable element.
 	    d.scroller = elt("div", [d.sizer, d.heightForcer, d.gutters], "CodeMirror-scroll");
-	    d.scroller.setAttribute("tabIndex", "-1"
+	    d.scroller.setAttribute("tabIndex", "-1");
 	    // The element in which the editor lives.
-	    );d.wrapper = elt("div", [d.scrollbarFiller, d.gutterFiller, d.scroller], "CodeMirror"
+	    d.wrapper = elt("div", [d.scrollbarFiller, d.gutterFiller, d.scroller], "CodeMirror");
 	
 	    // Work around IE7 z-index bug (not perfect, hence IE7 not really being supported)
-	    );if (ie && ie_version < 8) {
+	    if (ie && ie_version < 8) {
 	      d.gutters.style.zIndex = -1;d.scroller.style.paddingRight = 0;
 	    }
 	    if (!webkit && !(gecko && mobile)) {
@@ -755,8 +757,8 @@ webpackJsonp([4],{
 	    var out = [];
 	    doc.iter(from, to, function (line) {
 	      out.push(line.text);
-	    } // iter aborts when callback returns truthy value
-	    );return out;
+	    }); // iter aborts when callback returns truthy value
+	    return out;
 	  }
 	
 	  // Update the height of a line, propagating the height change
@@ -983,10 +985,10 @@ webpackJsonp([4],{
 	        isInsert = cmp(change.from, change.to) == 0;
 	    // Get the spans that 'stick out' on both sides
 	    var first = markedSpansBefore(oldFirst, startCh, isInsert);
-	    var last = markedSpansAfter(oldLast, endCh, isInsert
+	    var last = markedSpansAfter(oldLast, endCh, isInsert);
 	
 	    // Next, merge those two ends
-	    );var sameLine = change.text.length == 1,
+	    var sameLine = change.text.length == 1,
 	        offset = lst(change.text).length + (sameLine ? startCh : 0);
 	    if (first) {
 	      // Fix up .to properties of first
@@ -1711,12 +1713,12 @@ webpackJsonp([4],{
 	
 	      return order;
 	    };
-	  }
+	  }();
 	
 	  // Get the bidi ordering for the given line (and cache it). Returns
 	  // false for lines that are fully left-to-right, and an array of
 	  // BidiSpan objects otherwise.
-	  ();function getOrder(line) {
+	  function getOrder(line) {
 	    var order = line.order;
 	    if (order == null) {
 	      order = line.order = bidiOrdering(line.text);
@@ -2210,10 +2212,10 @@ webpackJsonp([4],{
 	    // Compute the base array of styles
 	    runMode(cm, line.text, cm.doc.mode, state, function (end, style) {
 	      return st.push(end, style);
-	    }, lineClasses, forceToEnd
+	    }, lineClasses, forceToEnd);
 	
 	    // Run overlays, adjust style array.
-	    );var loop = function loop(o) {
+	    var loop = function loop(o) {
 	      var overlay = cm.state.overlays[o],
 	          i = 1,
 	          at = 0;
@@ -2857,9 +2859,9 @@ webpackJsonp([4],{
 	    // The starting line
 	    this.line = line;
 	    // Continuing lines, if any
-	    this.rest = visualLineContinued(line
+	    this.rest = visualLineContinued(line);
 	    // Number of logical lines in this visual line
-	    );this.size = this.rest ? lineNo(lst(this.rest)) - lineN + 1 : 1;
+	    this.size = this.rest ? lineNo(lst(this.rest)) - lineN + 1 : 1;
 	    this.node = this.text = null;
 	    this.hidden = lineIsHidden(doc, line);
 	  }
@@ -3810,10 +3812,10 @@ webpackJsonp([4],{
 	      return display.cachedTextHeight;
 	    }
 	    if (measureText == null) {
-	      measureText = elt("pre"
+	      measureText = elt("pre");
 	      // Measure a bunch of lines, for browsers that compute
 	      // fractional heights.
-	      );for (var i = 0; i < 49; ++i) {
+	      for (var i = 0; i < 49; ++i) {
 	        measureText.appendChild(document.createTextNode("x"));
 	        measureText.appendChild(elt("br"));
 	      }
@@ -3922,9 +3924,9 @@ webpackJsonp([4],{
 	
 	    var x,
 	        y,
-	        space = display.lineSpace.getBoundingClientRect
+	        space = display.lineSpace.getBoundingClientRect();
 	    // Fails unpredictably on IE[67] when mouse is dragged around quickly.
-	    ();try {
+	    try {
 	      x = e.clientX - space.left;y = e.clientY - space.top;
 	    } catch (e) {
 	      return null;
@@ -4146,11 +4148,11 @@ webpackJsonp([4],{
 	    if (!cm.state.focused) {
 	      signal(cm, "focus", cm, e);
 	      cm.state.focused = true;
-	      addClass(cm.display.wrapper, "CodeMirror-focused"
+	      addClass(cm.display.wrapper, "CodeMirror-focused");
 	      // This test prevents this from firing when a context
 	      // menu is closed (since the input reset would kill the
 	      // select-all detection hack)
-	      );if (!cm.curOp && cm.display.selForContextMenu != cm.doc.sel) {
+	      if (!cm.curOp && cm.display.selForContextMenu != cm.doc.sel) {
 	        cm.display.input.reset();
 	        if (webkit) {
 	          setTimeout(function () {
@@ -4293,10 +4295,10 @@ webpackJsonp([4],{
 	    var bottom = viewport && viewport.bottom != null ? viewport.bottom : top + display.wrapper.clientHeight;
 	
 	    var from = _lineAtHeight(doc, top),
-	        to = _lineAtHeight(doc, bottom
+	        to = _lineAtHeight(doc, bottom);
 	    // Ensure is a {from: {line, ch}, to: {line, ch}} object, and
 	    // forces those lines into the viewport (if possible).
-	    );if (viewport && viewport.ensure) {
+	    if (viewport && viewport.ensure) {
 	      var ensureFrom = viewport.ensure.from.line,
 	          ensureTo = viewport.ensure.to.line;
 	      if (ensureFrom < from) {
@@ -4430,12 +4432,12 @@ webpackJsonp([4],{
 	      if (dy && canScrollY) {
 	        setScrollTop(cm, Math.max(0, Math.min(scroll.scrollTop + dy * wheelPixelsPerUnit, scroll.scrollHeight - scroll.clientHeight)));
 	      }
-	      setScrollLeft(cm, Math.max(0, Math.min(scroll.scrollLeft + dx * wheelPixelsPerUnit, scroll.scrollWidth - scroll.clientWidth))
+	      setScrollLeft(cm, Math.max(0, Math.min(scroll.scrollLeft + dx * wheelPixelsPerUnit, scroll.scrollWidth - scroll.clientWidth)));
 	      // Only prevent default scrolling if vertical scrolling is
 	      // actually possible. Otherwise, it causes vertical scroll
 	      // jitter on OSX trackpads when deltaX is small and deltaY
 	      // is large (issue #3579)
-	      );if (!dy || dy && canScrollY) {
+	      if (!dy || dy && canScrollY) {
 	        e_preventDefault(e);
 	      }
 	      display.wheelStartX = null; // Abort measurement, if in progress
@@ -4675,9 +4677,9 @@ webpackJsonp([4],{
 	    }
 	
 	    cm.display.scrollbars = new scrollbarModel[cm.options.scrollbarStyle](function (node) {
-	      cm.display.wrapper.insertBefore(node, cm.display.scrollbarFiller
+	      cm.display.wrapper.insertBefore(node, cm.display.scrollbarFiller);
 	      // Prevent clicks in the scrollbars from killing focus
-	      );on(node, "mousedown", function () {
+	      on(node, "mousedown", function () {
 	        if (cm.state.focused) {
 	          setTimeout(function () {
 	            return cm.display.input.focus();
@@ -4943,12 +4945,12 @@ webpackJsonp([4],{
 	      updateHeightsInViewport(cm);
 	    }
 	
-	    op.barMeasure = measureForScrollbars(cm
+	    op.barMeasure = measureForScrollbars(cm);
 	
 	    // If the max line changed since it was last measured, measure it,
 	    // and ensure the document's width matches it.
 	    // updateDisplay_W2 will use these properties to do the actual resizing
-	    );if (display.maxLineChanged && !cm.options.lineWrapping) {
+	    if (display.maxLineChanged && !cm.options.lineWrapping) {
 	      op.adjustWidthTo = measureChar(cm, display.maxLine, display.maxLine.text.length).left + 3;
 	      cm.display.sizerWidth = op.adjustWidthTo;
 	      op.barMeasure.scrollWidth = Math.max(display.scroller.clientWidth, display.sizer.offsetLeft + op.adjustWidthTo + scrollGap(cm) + cm.display.barWidth);
@@ -5442,9 +5444,9 @@ webpackJsonp([4],{
 	    var different = from != display.viewFrom || to != display.viewTo || display.lastWrapHeight != update.wrapperHeight || display.lastWrapWidth != update.wrapperWidth;
 	    adjustView(cm, from, to);
 	
-	    display.viewOffset = _heightAtLine(getLine(cm.doc, display.viewFrom)
+	    display.viewOffset = _heightAtLine(getLine(cm.doc, display.viewFrom));
 	    // Position the mover div to align with the current scroll position
-	    );cm.display.mover.style.top = display.viewOffset + "px";
+	    cm.display.mover.style.top = display.viewOffset + "px";
 	
 	    var toUpdate = countDirtyView(cm);
 	    if (!different && toUpdate == 0 && !update.force && display.renderedView == display.view && (display.updateLineNumbers == null || display.updateLineNumbers >= display.viewTo)) {
@@ -7134,10 +7136,10 @@ webpackJsonp([4],{
 	    this.doc = doc;
 	    this.id = ++nextMarkerId;
 	  }
-	  eventMixin(TextMarker
+	  eventMixin(TextMarker);
 	
 	  // Clear the marker.
-	  );TextMarker.prototype.clear = function () {
+	  TextMarker.prototype.clear = function () {
 	    var this$1 = this;
 	
 	    if (this.explicitlyCleared) {
@@ -7340,9 +7342,9 @@ webpackJsonp([4],{
 	      }
 	      addMarkedSpan(line, new MarkedSpan(marker, curLine == from.line ? from.ch : null, curLine == to.line ? to.ch : null));
 	      ++curLine;
-	    }
+	    });
 	    // lineIsHidden depends on the presence of the spans, so needs a second pass
-	    );if (marker.collapsed) {
+	    if (marker.collapsed) {
 	      doc.iter(from.line, to.line + 1, function (line) {
 	        if (lineIsHidden(doc, line)) {
 	          updateLineHeight(line, 0);
@@ -7983,10 +7985,10 @@ webpackJsonp([4],{
 	    lineSeparator: function lineSeparator() {
 	      return this.lineSep || "\n";
 	    }
-	  }
+	  });
 	
 	  // Public alias.
-	  );Doc.prototype.eachLine = Doc.prototype.iter;
+	  Doc.prototype.eachLine = Doc.prototype.iter;
 	
 	  // Kludge to work around strange IE behavior where it'll sometimes
 	  // re-fire a series of drag-related events right after the drop (#1551)
@@ -8043,9 +8045,9 @@ webpackJsonp([4],{
 	      // Normal drop
 	      // Don't do a replace if the drop happened inside of the selected text.
 	      if (cm.state.draggingText && cm.doc.sel.contains(pos) > -1) {
-	        cm.state.draggingText(e
+	        cm.state.draggingText(e);
 	        // Ensure the editor is re-focused
-	        );setTimeout(function () {
+	        setTimeout(function () {
 	          return cm.display.input.focus();
 	        }, 20);
 	        return;
@@ -8088,9 +8090,9 @@ webpackJsonp([4],{
 	      img.src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 	      if (presto) {
 	        img.width = img.height = 1;
-	        cm.display.wrapper.appendChild(img
+	        cm.display.wrapper.appendChild(img);
 	        // Force a relayout, or Opera won't use our image for some obscure reason
-	        );img._top = img.offsetTop;
+	        img._top = img.offsetTop;
 	      }
 	      e.dataTransfer.setDragImage(img, 0, 0);
 	      if (presto) {
@@ -8155,9 +8157,9 @@ webpackJsonp([4],{
 	          forEachCodeMirror(onResize);
 	        }, 100);
 	      }
-	    }
+	    });
 	    // When the window loses focus, we want to show the editor as blurred
-	    );on(window, "blur", function () {
+	    on(window, "blur", function () {
 	      return forEachCodeMirror(onBlur);
 	    });
 	  }
@@ -8854,9 +8856,9 @@ webpackJsonp([4],{
 	    if (presto && (!e.which || e.which < 10) && handleKeyBinding(cm, e)) {
 	      return;
 	    }
-	    var ch = String.fromCharCode(charCode == null ? keyCode : charCode
+	    var ch = String.fromCharCode(charCode == null ? keyCode : charCode);
 	    // Some browsers fire keypress events for backspace
-	    );if (ch == "\x08") {
+	    if (ch == "\x08") {
 	      return;
 	    }
 	    if (handleCharBinding(cm, e, ch)) {
@@ -8985,9 +8987,9 @@ webpackJsonp([4],{
 	          display.input.focus();
 	        }
 	      }
-	    }
+	    });
 	    // Let the drag handler handle this.
-	    );if (webkit) {
+	    if (webkit) {
 	      display.scroller.draggable = true;
 	    }
 	    cm.state.draggingText = dragEnd;
@@ -9114,12 +9116,12 @@ webpackJsonp([4],{
 	      }
 	    }
 	
-	    var editorSize = display.wrapper.getBoundingClientRect
+	    var editorSize = display.wrapper.getBoundingClientRect();
 	    // Used to ensure timeout re-tries don't fire when another extend
 	    // happened in the meantime (clearTimeout isn't reliable -- at
 	    // least on Chrome, the timeouts still happen even when cleared,
 	    // if the clear happens after their scheduled firing time).
-	    ();var counter = 0;
+	    var counter = 0;
 	
 	    function extend(e) {
 	      var curCount = ++counter;
@@ -9540,10 +9542,10 @@ webpackJsonp([4],{
 	    for (var i = 0; i < initHooks.length; ++i) {
 	      initHooks[i](this$1);
 	    }
-	    endOperation(this
+	    endOperation(this);
 	    // Suppress optimizelegibility in Webkit, since it breaks text
 	    // measuring on line wrapping boundaries.
-	    );if (webkit && options.lineWrapping && getComputedStyle(display.lineDiv).textRendering == "optimizelegibility") {
+	    if (webkit && options.lineWrapping && getComputedStyle(display.lineDiv).textRendering == "optimizelegibility") {
 	      display.lineDiv.style.textRendering = "auto";
 	    }
 	  }
@@ -9556,9 +9558,9 @@ webpackJsonp([4],{
 	  // Attach the necessary event handlers when initializing the editor
 	  function registerEventHandlers(cm) {
 	    var d = cm.display;
-	    on(d.scroller, "mousedown", operation(cm, onMouseDown)
+	    on(d.scroller, "mousedown", operation(cm, onMouseDown));
 	    // Older IE's will not fire a second mousedown for a double click
-	    );if (ie && ie_version < 11) {
+	    if (ie && ie_version < 11) {
 	      on(d.scroller, "dblclick", operation(cm, function (e) {
 	        if (signalDOMEvent(cm, e)) {
 	          return;
@@ -9650,28 +9652,28 @@ webpackJsonp([4],{
 	      }
 	      finishTouch();
 	    });
-	    on(d.scroller, "touchcancel", finishTouch
+	    on(d.scroller, "touchcancel", finishTouch);
 	
 	    // Sync scrolling between fake scrollbars and real scrollable
 	    // area, ensure viewport is updated when scrolling.
-	    );on(d.scroller, "scroll", function () {
+	    on(d.scroller, "scroll", function () {
 	      if (d.scroller.clientHeight) {
 	        setScrollTop(cm, d.scroller.scrollTop);
 	        setScrollLeft(cm, d.scroller.scrollLeft, true);
 	        signal(cm, "scroll", cm);
 	      }
-	    }
+	    });
 	
 	    // Listen to wheel events in order to try and update the viewport on time.
-	    );on(d.scroller, "mousewheel", function (e) {
+	    on(d.scroller, "mousewheel", function (e) {
 	      return onScrollWheel(cm, e);
 	    });
 	    on(d.scroller, "DOMMouseScroll", function (e) {
 	      return onScrollWheel(cm, e);
-	    }
+	    });
 	
 	    // Prevent wrapper from ever scrolling
-	    );on(d.wrapper, "scroll", function () {
+	    on(d.wrapper, "scroll", function () {
 	      return d.wrapper.scrollTop = d.wrapper.scrollLeft = 0;
 	    });
 	
@@ -9934,12 +9936,12 @@ webpackJsonp([4],{
 	
 	  function hiddenTextarea() {
 	    var te = elt("textarea", null, null, "position: absolute; bottom: -1em; padding: 0; width: 1px; height: 1em; outline: none");
-	    var div = elt("div", [te], null, "overflow: hidden; position: relative; width: 3px; height: 0px;"
+	    var div = elt("div", [te], null, "overflow: hidden; position: relative; width: 3px; height: 0px;");
 	    // The textarea is kept positioned near the cursor to prevent the
 	    // fact that it'll be scrolled into view on input from scrolling
 	    // our fake cursor out of view. On webkit, when wrap=off, paste is
 	    // very slow. So make the area wide instead.
-	    );if (webkit) {
+	    if (webkit) {
 	      te.style.width = "1000px";
 	    } else {
 	      te.setAttribute("wrap", "off");
@@ -10275,9 +10277,9 @@ webpackJsonp([4],{
 	          top = pos.top;
 	        } else if (vert == "above" || vert == "near") {
 	          var vspace = Math.max(display.wrapper.clientHeight, this.doc.height),
-	              hspace = Math.max(display.sizer.clientWidth, display.lineSpace.clientWidth
+	              hspace = Math.max(display.sizer.clientWidth, display.lineSpace.clientWidth);
 	          // Default to positioning above (if specified and possible); otherwise default to positioning below
-	          );if ((vert == 'above' || pos.bottom + node.offsetHeight > vspace) && pos.top > node.offsetHeight) {
+	          if ((vert == 'above' || pos.bottom + node.offsetHeight > vspace) && pos.top > node.offsetHeight) {
 	            top = pos.top - node.offsetHeight;
 	          } else if (pos.bottom + node.offsetHeight <= vspace) {
 	            top = pos.bottom;
@@ -10805,9 +10807,9 @@ webpackJsonp([4],{
 	        }
 	        if (e.clipboardData) {
 	          e.clipboardData.clearData();
-	          var content = lastCopied.text.join("\n"
+	          var content = lastCopied.text.join("\n");
 	          // iOS exposes the clipboard API, but seems to discard content inserted into it
-	          );e.clipboardData.setData("Text", content);
+	          e.clipboardData.setData("Text", content);
 	          if (e.clipboardData.getData("Text") == content) {
 	            e.preventDefault();
 	            return;
@@ -11309,14 +11311,14 @@ webpackJsonp([4],{
 	          cm = this.cm;
 	
 	      // Wraps and hides input textarea
-	      var div = this.wrapper = hiddenTextarea
+	      var div = this.wrapper = hiddenTextarea();
 	      // The semihidden textarea that is focused when the editor is
 	      // focused, and receives input.
-	      ();var te = this.textarea = div.firstChild;
-	      display.wrapper.insertBefore(div, display.wrapper.firstChild
+	      var te = this.textarea = div.firstChild;
+	      display.wrapper.insertBefore(div, display.wrapper.firstChild);
 	
 	      // Needed to hide big blue blinking cursor on Mobile Safari (doesn't seem to work in iOS 8 anymore)
-	      );if (ios) {
+	      if (ios) {
 	        te.style.width = "0px";
 	      }
 	
@@ -11374,10 +11376,10 @@ webpackJsonp([4],{
 	        }
 	        cm.state.pasteIncoming = true;
 	        input.focus();
-	      }
+	      });
 	
 	      // Prevent normal selection in the editor (we handle our own)
-	      );on(display.lineSpace, "selectstart", function (e) {
+	      on(display.lineSpace, "selectstart", function (e) {
 	        if (!eventInWidget(display, e)) {
 	          e_preventDefault(e);
 	        }
@@ -11407,10 +11409,10 @@ webpackJsonp([4],{
 	      var cm = this.cm,
 	          display = cm.display,
 	          doc = cm.doc;
-	      var result = _prepareSelection(cm
+	      var result = _prepareSelection(cm);
 	
 	      // Move the hidden textarea near the cursor to prevent scrolling artifacts
-	      );if (cm.options.moveInputWithCursor) {
+	      if (cm.options.moveInputWithCursor) {
 	        var headPos = _cursorCoords(cm, doc.sel.primary().head, "div");
 	        var wrapOff = display.wrapper.getBoundingClientRect(),
 	            lineOff = display.lineDiv.getBoundingClientRect();
@@ -11575,10 +11577,10 @@ webpackJsonp([4],{
 	      }
 	
 	      runInOp(cm, function () {
-	        applyTextInput(cm, text.slice(same), prevInput.length - same, null, this$1.composing ? "*compose" : null
+	        applyTextInput(cm, text.slice(same), prevInput.length - same, null, this$1.composing ? "*compose" : null);
 	
 	        // Don't leave long text in the textarea, since it makes further polling slow
-	        );if (text.length > 1000 || text.indexOf("\n") > -1) {
+	        if (text.length > 1000 || text.indexOf("\n") > -1) {
 	          input.value = this$1.prevInput = "";
 	        } else {
 	          this$1.prevInput = text;
@@ -11636,19 +11638,19 @@ webpackJsonp([4],{
 	      if (webkit) {
 	        window.scrollTo(null, oldScrollY);
 	      }
-	      display.input.reset
+	      display.input.reset();
 	      // Adds "Select all" to context menu in FF
-	      ();if (!cm.somethingSelected()) {
+	      if (!cm.somethingSelected()) {
 	        te.value = input.prevInput = " ";
 	      }
 	      input.contextMenuPending = true;
 	      display.selForContextMenu = cm.doc.sel;
-	      clearTimeout(display.detectingSelectAll
+	      clearTimeout(display.detectingSelectAll);
 	
 	      // Select-all will be greyed out if there's nothing to select, so
 	      // this adds a zero-width space so that we can later check whether
 	      // it got selected.
-	      );function prepareSelectAllHack() {
+	      function prepareSelectAllHack() {
 	        if (te.selectionStart != null) {
 	          var selected = cm.somethingSelected();
 	          var extval = '\u200B' + (selected ? te.value : "");
@@ -11736,9 +11738,9 @@ webpackJsonp([4],{
 	
 	    var realSubmit;
 	    if (textarea.form) {
-	      on(textarea.form, "submit", save
+	      on(textarea.form, "submit", save);
 	      // Deplorable hack to make the submit method do the right thing.
-	      );if (!options.leaveSubmitMethodAlone) {
+	      if (!options.leaveSubmitMethodAlone) {
 	        var form = textarea.form;
 	        realSubmit = form.submit;
 	        try {
@@ -11826,10 +11828,10 @@ webpackJsonp([4],{
 	
 	  defineOptions(CodeMirror$1);
 	
-	  addEditorMethods(CodeMirror$1
+	  addEditorMethods(CodeMirror$1);
 	
 	  // Set up methods on CodeMirror's prototype to redirect to the editor's document.
-	  );var dontDelegate = "iter insert remove copy getEditor constructor".split(" ");
+	  var dontDelegate = "iter insert remove copy getEditor constructor".split(" ");
 	  for (var prop in Doc.prototype) {
 	    if (Doc.prototype.hasOwnProperty(prop) && indexOf(dontDelegate, prop) < 0) {
 	      CodeMirror$1.prototype[prop] = function (method) {
@@ -11840,11 +11842,11 @@ webpackJsonp([4],{
 	    }
 	  }
 	
-	  eventMixin(Doc
+	  eventMixin(Doc);
 	
 	  // INPUT HANDLING
 	
-	  );CodeMirror$1.inputStyles = { "textarea": TextareaInput, "contenteditable": ContentEditableInput
+	  CodeMirror$1.inputStyles = { "textarea": TextareaInput, "contenteditable": ContentEditableInput
 	
 	    // MODE DEFINITION AND QUERYING
 	
@@ -11866,11 +11868,11 @@ webpackJsonp([4],{
 	        return stream.skipToEnd();
 	      } };
 	  });
-	  CodeMirror$1.defineMIME("text/plain", "null"
+	  CodeMirror$1.defineMIME("text/plain", "null");
 	
 	  // EXTENSIONS
 	
-	  );CodeMirror$1.defineExtension = function (name, func) {
+	  CodeMirror$1.defineExtension = function (name, func) {
 	    CodeMirror$1.prototype[name] = func;
 	  };
 	  CodeMirror$1.defineDocExtension = function (name, func) {
@@ -11892,34 +11894,36 @@ webpackJsonp([4],{
 
 /***/ }),
 
+/***/ 83:
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(84), __esModule: true };
+
+/***/ }),
+
 /***/ 84:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(85), __esModule: true };
+	__webpack_require__(85);
+	var $Object = __webpack_require__(9).Object;
+	module.exports = function create(P, D) {
+	  return $Object.create(P, D);
+	};
+
 
 /***/ }),
 
 /***/ 85:
 /***/ (function(module, exports, __webpack_require__) {
 
-	__webpack_require__(86);
-	var $Object = __webpack_require__(9).Object;
-	module.exports = function create(P, D){
-	  return $Object.create(P, D);
-	};
+	var $export = __webpack_require__(7);
+	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+	$export($export.S, 'Object', { create: __webpack_require__(48) });
+
 
 /***/ }),
 
 /***/ 86:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var $export = __webpack_require__(7)
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	$export($export.S, 'Object', {create: __webpack_require__(48)});
-
-/***/ }),
-
-/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -11928,7 +11932,7 @@ webpackJsonp([4],{
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
-	var _codemirror = __webpack_require__(83);
+	var _codemirror = __webpack_require__(82);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -12732,7 +12736,7 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 88:
+/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -12741,7 +12745,7 @@ webpackJsonp([4],{
 	
 	var _typeof3 = _interopRequireDefault(_typeof2);
 	
-	var _codemirror = __webpack_require__(83);
+	var _codemirror = __webpack_require__(82);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -13297,12 +13301,12 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 89:
+/***/ 88:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _codemirror = __webpack_require__(83);
+	var _codemirror = __webpack_require__(82);
 	
 	(function (mod) {
 	  // if (typeof exports == "object" && typeof module == "object") // CommonJS
@@ -13310,7 +13314,7 @@ webpackJsonp([4],{
 	  // else if (typeof define == "function" && define.amd) // AMD
 	  //   define(["./codemirror", "./xml", "./javascript", "./css"], mod);
 	  // else // Plain browser env
-	  mod(_codemirror.CodeMirror, __webpack_require__(90), __webpack_require__(87), __webpack_require__(88));
+	  mod(_codemirror.CodeMirror, __webpack_require__(89), __webpack_require__(86), __webpack_require__(87));
 	})(function (CodeMirror) {
 	  "use strict";
 	
@@ -13445,12 +13449,12 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 90:
+/***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _codemirror = __webpack_require__(83);
+	var _codemirror = __webpack_require__(82);
 	
 	(function (mod) {
 	  mod(_codemirror.CodeMirror);
@@ -13826,14 +13830,14 @@ webpackJsonp([4],{
 
 /***/ }),
 
-/***/ 91:
+/***/ 90:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 92:
+/***/ 91:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
