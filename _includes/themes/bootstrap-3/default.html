@@ -10,12 +10,21 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Custom styles -->
-    <link href="{{ ASSET_PATH }}/src/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/src{{ ASSET_PATH }}/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        document.write('<script src="/dist/a.js?v='+Math.random()+'"><\/script>')
+    </script>
+    <script type="text/javascript">
+
+        document.write('<link href="/dist'+window.staticMap['style'].css+'" rel="stylesheet" type="text/css"><\/link>')
+    </script>
     <!-- single page styles -->
     {% if page.loadCss !=null %}
         {% for css in page.loadCss %}
-            <link href="{{ ASSET_PATH }}/css/{{css}}.css" rel="stylesheet" type="text/css">
+            <script type="text/javascript">
+
+        document.write('<link href="/dist'+window.staticMap['{{css}}'].css+'" rel="stylesheet" type="text/css"><\/link>')
+    </script>
         {% endfor %}
     {% endif %}
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -77,10 +86,16 @@
         </div>
     </div>
     {% include JB/analytics %}
-    <script src="{{ ASSET_PATH }}/js/common.js"></script>
+    <script type="text/javascript">
+
+            document.write('<script href="/dist'+window.staticMap['manifest'].js+'"><\/script>');
+            document.write('<script href="/dist'+window.staticMap['vendor'].js+'"><\/script>');
+        </script>
     {% if page.loadJs !=null %}
         {% for js in page.loadJs %}
-            <script src="{{ ASSET_PATH }}/js/{{js}}.js"></script>
+            <script type="text/javascript">
+                document.write('<script href="/dist'+window.staticMap['{{js}}'].js+'"><\/script>')
+            </script>
         {% endfor %}
     {% endif %}
   </body>
