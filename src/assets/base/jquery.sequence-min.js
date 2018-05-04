@@ -1,3 +1,5 @@
+
+/*var jQuery = require('jquery');*/
 /*
 Sequence.js (http://www.sequencejs.com)
 Version: 1.0.1

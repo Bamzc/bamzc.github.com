@@ -16,14 +16,14 @@
     </script>
     <script type="text/javascript">
 
-        document.write('<link href="/dist'+window.staticMap['style'].css+'" rel="stylesheet" type="text/css"><\/link>')
+        __loadCss('style')
     </script>
     <!-- single page styles -->
     {% if page.loadCss !=null %}
         {% for css in page.loadCss %}
             <script type="text/javascript">
 
-        document.write('<link href="/dist'+window.staticMap['{{css}}'].css+'" rel="stylesheet" type="text/css"><\/link>')
+        __loadCss('{{css}}')
     </script>
         {% endfor %}
     {% endif %}
@@ -87,14 +87,13 @@
     </div>
     {% include JB/analytics %}
     <script type="text/javascript">
-
-            document.write('<script href="/dist'+window.staticMap['manifest'].js+'"><\/script>');
-            document.write('<script href="/dist'+window.staticMap['vendor'].js+'"><\/script>');
+            __loadJs('manifest');
+            __loadJs('vendor');
         </script>
     {% if page.loadJs !=null %}
         {% for js in page.loadJs %}
             <script type="text/javascript">
-                document.write('<script href="/dist'+window.staticMap['{{js}}'].js+'"><\/script>')
+                __loadJs('{{js}}')
             </script>
         {% endfor %}
     {% endif %}

@@ -34,18 +34,8 @@ module.exports = {
         extensions: ['.css', '.js', '.vue'],
         // fallback: [path.join(__dirname, '../node_modules')],
         alias: {
-            'vue$': 'vue/dist/vue',
             'src': path.resolve(__dirname, '../src'),
-            'assets': path.resolve(__dirname, '../src/assets'),
-            'components': path.resolve(__dirname, '../src/components'),
-            'jquery': path.join(__dirname, '../src/libs/jquery-3.2.1.min'),
-            '$': 'jquery',
-            'jQuery' : 'jQuery',
-            'velocity': path.join(__dirname, '../src/libs/velocity/velocity'),
-            'velocity-Ui': path.join(__dirname, '../src/libs/velocity/velocity.ui'),
-            'ztree':path.join(__dirname,'../src/libs/zTree/js/jquery.ztree.core'),
-            'dhtmlxscheduler':path.join(__dirname,'../src/libs/dhtmlxScheduler/sources/dhtmlxscheduler.js'),
-            'dhtmlxschedulerTimeline':path.join(__dirname,'../src/libs/dhtmlxScheduler/sources/ext/dhtmlxscheduler_timeline.js')
+            'assets': path.resolve(__dirname, '../src/assets')
         }
     },
     module : {
@@ -96,6 +86,15 @@ module.exports = {
             test : /\.js/,
             exclude: [/node_modules|vue\/dist/],
             use: 'babel-loader'
+        },{
+            test: require.resolve('jquery'),
+            use: [{
+              loader: 'expose-loader',
+              options: 'jQuery'
+            },{
+              loader: 'expose-loader',
+              options: '$'
+            }]
         }]
     },
     devtool: '#source-map'

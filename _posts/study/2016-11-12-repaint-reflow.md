@@ -14,7 +14,7 @@ group: navigation
 ---
 <h3>1. 什么是Repaint/Reflow?</h3>
 <p>先来一张图：浏览器解析大概的工作流程</p>
-<pre><img src="/assets/src/img/repaint_reflow.png" alt="浏览器解析大概的工作流程"></pre>
+<pre><img src="/src/assets/img/repaint_reflow.png" alt="浏览器解析大概的工作流程"></pre>
 <p>这张图应该可以很好理解，归纳为四个步骤：</p>
 <ul>
 <li>1、解析HTML以构建DOM树：渲染引擎开始解析HTML文档，转换树中的html标签或js生成的标签到DOM节点，它被称为 -- 内容树。</li>

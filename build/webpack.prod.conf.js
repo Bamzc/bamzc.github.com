@@ -15,7 +15,16 @@ var AssetsPlugin = require('assets-webpack-plugin');
 var assetsPluginInstance = new AssetsPlugin({
     filename: 'dist/a.js',
     processOutput: function (assets) {
-        return 'window.staticMap = ' + JSON.stringify(assets)
+        return '~function (window) {' +
+                'var staticMap = ' + JSON.stringify(assets) +
+
+               ';window.__loadJs = function(js){'+
+                    'document.write("<script type=\'text/javascript\' src=\'/dist"+staticMap[js].js+"\'></scr'+'ipt>");'+
+                '};'+
+                ';window.__loadCss = function(css){'+
+                    'document.write("<link rel=\'stylesheet\' type=\'text/css\' href=\'/dist"+staticMap[css].css+"\'></li+'+'nk>");'+
+                '};'+
+            '}(window);'
     }
 });
 

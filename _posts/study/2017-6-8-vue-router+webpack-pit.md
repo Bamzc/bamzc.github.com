@@ -14,7 +14,7 @@ brief: 使用Vue.js框架，利用vue-router结合webpack编写了一个单页�
 <p>使用Vue.js框架，利用vue-router结合webpack编写了一个单页路由项目，在服务器端配置nginx。部署完成后，访问首页没问题，从首页里打开二级页面没问题，但是所有的二级页面打开后，再次刷新，就会出现404现象。</p>
 
 <p>如图:</p>
-<img src="/assets/src/img/nginx-404.png">
+<img src="/src/assets/img/nginx-404.png">
 
 <pre>
 <div class="note-warning">

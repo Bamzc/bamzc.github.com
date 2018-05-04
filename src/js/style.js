@@ -1,8 +1,4 @@
-/**
-  *公共css入口文件
-  */
+var jQuery = require('jquery');
 require('../assets/css/main.css');
-/*
- * 加载公共js文件
- */
-import '../assets/base/bootstrap.min';
+
+require('../assets/base/bootstrap.min');

@@ -1,3 +1,5 @@
+let $ = require('jquery');
+
 class Comments{
     ajaxHandlerComments(cb,key){
     	/*$.ajax({

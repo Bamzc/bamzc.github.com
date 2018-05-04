@@ -6,6 +6,8 @@ import '../base/codemirror/css.js';
 import '../base/codemirror/htmlmixed.js';
 import '../base/codemirror/xml.js';
 
+let $ = require('jquery');
+
 class OnlineEditor{
 	handler(el,way){
         el.each((k,v) =>{

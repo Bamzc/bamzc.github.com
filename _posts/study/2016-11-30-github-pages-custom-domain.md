@@ -24,7 +24,7 @@ group: navigation
 <p>Github读取<code>CNAME</code>之后，Github服务器会设置<code>bamzc.top</code>为主域名，然后将<code>bamzc.github.io</code>重定向到<code>bamzc.top</code>。</p>
 <h3>2. CNAME绑定域名</h3>
 <p>登录<a href="https://netcn.console.aliyun.com/core/domain/list?spm=a21av.7663245.a2a45.1.ywyUxP">阿里云单域名控制台</a>，在域名解析中添加如图所示的解析</p>
-<img src="/assets/src/img/DNS.jpg" alt="">
+<img src="/src/assets/img/DNS.jpg" alt="">
 <p>默认使用阿里云提供的万网DNS服务器。当然你也可以使用<a href="https://www.dnspod.cn/">DNSPOD</a>提供的DNS服务器，这样可以使你的域名在国外更快速的传播。当你使用DNSPOD提供的DNS服务器时，除了DNS服务器不一样以外，其他的设置（比如A记录和CNAME记录）均相同。以下我们简要分析我们所添加的A记录和CNAME记录的含义。</p>
 <p>在域名解析中，A记录就是直接指定一个IP，CNAME就是重命名，指向另一个域名。</p>
 <ul>
