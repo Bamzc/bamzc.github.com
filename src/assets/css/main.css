@@ -592,6 +592,13 @@ a:hover {
     #sequence .subtitle {
         visibility: hidden;
     }
+    .content-center .left-column{
+        width: 100% !important;
+    }
+    .content-center .right-column{
+        width: 100% !important;
+    }
+
 }
 
 .section {

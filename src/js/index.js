@@ -1,6 +1,5 @@
 'use strict'
 var jQuery = require('jquery');
-console.log(jQuery)
 require('../assets/base/jquery.sequence-min');
 require('../assets/base/bootstrap.min');
 $(function(){
