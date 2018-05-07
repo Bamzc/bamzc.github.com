@@ -162,7 +162,7 @@ paginate_path: "page:num"
 </pre>
 <h2>自定义插件paginate</h2>
 <p>其实就是修改版的jekyll-paginate，小小的装一下(奸笑)。废话不多说直接上干货！</p>
-<p>关于自定义插件，不多说，上传送门——<a href='http://jekyll.com.cn/docs/plugins/'>插件</a></p>
+<p>关于自定义插件，不多说，上传送门——<a class="more-link btn btn-primary btn-xs" href='http://jekyll.com.cn/docs/plugins/'>插件</a></p>
 <h4>先说一下，jekyll安装插件,有两种安装插件的方式：</h4>
 <ul>
   <li>1.在网站根下目录建立 _plugins 文件夹，插件放在这里即可。 Jekyll 运行之前，会加载此目录下所有以 *.rb 结尾的文件。</li>
@@ -170,7 +170,7 @@ paginate_path: "page:num"
  gems: [jekyll-test-plugin, jekyll-jsonify, jekyll-assets]</li>
 </ul>
 <h4>然后，引入两个文件pager.rb和paginate.rb放到_plugins</h4>
-<p>传送门——<a href='https://github.com/Bamzc/jekyll-paginate-plugin'>click here!</a></p>
+<p>传送门——<a class="more-link btn btn-primary btn-xs" href='https://github.com/Bamzc/jekyll-paginate-plugin'>click here!</a></p>
 <h2 id="section">同样开启分页功能</h2>
 <pre>
 <div class="note-warning">
@@ -183,16 +183,18 @@ paginate_path: "page:num"
 <p><code>index.html</code>一定要放在你的分类名称的文件夹下！切记！</p>
 <p><code>index.html</code>关于分类，我的做法是每个页面配置category，我也是根据category实现分页的
 <pre>
----
-layout: post
-category: study
----
+  ---
+  layout: post
+  //category: study
+  ascription: study
+  ---
 </pre>
+<p class="bg-danger">此处更新一下：</p>
+<p class="bg-danger">我发现很多引用我的文章，关于这块不太清楚，于是乎将category这个命名方式隔离(这个category原本jekyll分类的属性不再使用)，换成ascription</p>
 </p>
 <p>ok,到此已经完成了。可以尽情的使用了！其他功能都跟jekyll的分页类似了。</p>
 <h4>请允许我碎碎念一下！</h4>
 <ul>
   <li>烧脑一：为了实现我想要的功能，我对<code>ruby</code>语言是各种看，各种学习！这个能烧死我成千上万个脑细胞了！</li>
   <li>烧脑二：第一版其实实现的觉比较简单，我是这么想的，既然<code>paginate</code>可以作用到全局，那我是否引入<code>jekyll-paginate</code>修改一下全局变量<code>paginator.posts</code>改成按照我想要的分类分页，不是可以了？确实可以实现。比较简单！但是还是不满足我的需求。比如我的多页面多分类分页，于是乎继续无脑看，无脑改，最终版诞生了！</li>
-  <li>烧脑三：比较犯傻的一个环节，关于<code>assign</code>赋值，傻傻的我还进行了用它对全局变量赋值！于是乎,<code>paginator.post=site.categorys</code>,灰常失败的去这么做了！突然发现这个坑！</li>
 </ul>
