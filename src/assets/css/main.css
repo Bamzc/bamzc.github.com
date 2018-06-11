@@ -1590,7 +1590,7 @@ b {
     }
 }
 .content-center h1,h2,h3,h4,h5{
-    text-indent:1.5em;
+    /*text-indent:1.5em;*/
 }
 
 .content-center .left-column {
@@ -1610,7 +1610,6 @@ b {
     font-size: 18px;
     line-height: 1.5;
 }
-
 .content-center .right-column {
     float: left;
     width: 20%;

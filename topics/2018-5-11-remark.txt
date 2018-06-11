@@ -1,0 +1,44 @@
+---
+layout: study
+title : 记录
+header: 记录
+tagline: 记录
+date: 2018-5-11 20:20:21
+loadCss: ['study_relevant']
+loadJs: ['study_relevant']
+ascription: study
+brief: 记录
+---
+
+1.vue-router 的 hash 模式与 history 模式
+2.双向数据绑定的实现原理
+3.组件间传值的原理
+4.webpack的配置  webpack原理
+5.vuex实现原理
+6.px2rem原理
+7.weex的原理，源码的研究
+8.数组取交集
+9.Object.assign()用法
+10.promise的用法
+11.箭头函数相关的东西
+12.es6的模块与nodejs的模块有何异同
+13.http相关知识 如：状态码  有哪些属性 403,301，302,307,500
+14.随机数相关的东西
+15.用var 声明变量 ，点不同的dom结点，输出不同的值
+16.proxy 相关的内容
+17.js图片并行加载
+18.如果写一个commonjs那样的框架 说说思路
+19.用prototype写个继承
+20. hybrid的原理
+21.用没用过bind
+22.rem 怎么算出来的
+23.promise实现原理
+24.手写观察者模式
+25.写一个递归程序
+26.写一个数组去重
+
+上濒
+1.script async 异步阻塞
+2.Generator
+3.svg与canvas区别
+4.es6继承
